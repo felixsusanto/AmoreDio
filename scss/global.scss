@@ -1,0 +1,34 @@
+@import 'bootstrap'; 
+@import 'font-awesome';
+
+
+.widget-title{
+  @extend .h3;
+}
+
+.widget{
+  >ul{
+    @extend .list-unstyled;
+  }
+  &.widget_search{
+    span{
+      display:none;
+    }
+    .search-field{
+      @extend .form-control;
+    }
+    .search-submit{
+      @extend .btn;
+      @extend .btn-primary;
+    }
+  }
+}
+
+.comment-form-comment{
+  label[for="comment"]{
+    display:block;
+  }
+  textarea{
+    @extend .form-control;
+  }
+}

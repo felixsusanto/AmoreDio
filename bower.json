@@ -1,0 +1,28 @@
+{
+  "name": "jamhub",
+  "version": "0.0.0",
+  "homepage": "https://github.com/felixsusanto/theme-aff-1",
+  "authors": [
+    "felixsusanto <felix.susanto@wds.co>"
+  ],
+  "description": "jamhub",
+  "keywords": [
+    "jam",
+    "wp"
+  ],
+  "license": "MIT",
+  "private": true,
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "bootstrap-sass": "~3.3.4"
+  },
+  "devDependencies": {
+    "fontawesome": "~4.3.0"
+  }
+}
