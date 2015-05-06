@@ -342,8 +342,9 @@ th {
   }
 
   /* line 83, ../bower_components/bootstrap-sass/assets/stylesheets/bootstrap/_print.scss */
-  .btn > .caret, .widget.widget_search .search-submit > .caret,
+  .btn > .caret, #commentform .form-submit input[type="submit"] > .caret, .widget.widget_search .search-submit > .caret,
   .dropup > .btn > .caret,
+  #commentform .form-submit .dropup > input[type="submit"] > .caret,
   .widget.widget_search .dropup > .search-submit > .caret {
     border-top-color: #000 !important;
   }
@@ -3811,7 +3812,9 @@ output {
 }
 
 /* line 115, ../bower_components/bootstrap-sass/assets/stylesheets/bootstrap/_forms.scss */
-.form-control, .widget.widget_search .search-field, .comment-form-comment textarea {
+.form-control, #commentform .comment-form-author > input,
+#commentform .comment-form-email > input,
+#commentform .comment-form-url > input, #commentform .comment-form-comment > textarea, .widget.widget_search .search-field {
   display: block;
   width: 100%;
   height: 34px;
@@ -3830,37 +3833,59 @@ output {
   transition: border-color ease-in-out 0.15s, box-shadow ease-in-out 0.15s;
 }
 /* line 57, ../bower_components/bootstrap-sass/assets/stylesheets/bootstrap/mixins/_forms.scss */
-.form-control:focus, .widget.widget_search .search-field:focus, .comment-form-comment textarea:focus {
+.form-control:focus, #commentform .comment-form-author > input:focus,
+#commentform .comment-form-email > input:focus,
+#commentform .comment-form-url > input:focus, #commentform .comment-form-comment > textarea:focus, .widget.widget_search .search-field:focus {
   border-color: #66afe9;
   outline: 0;
   -webkit-box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075), 0 0 8px rgba(102, 175, 233, 0.6);
   box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075), 0 0 8px rgba(102, 175, 233, 0.6);
 }
 /* line 103, ../bower_components/bootstrap-sass/assets/stylesheets/bootstrap/mixins/_vendor-prefixes.scss */
-.form-control::-moz-placeholder, .widget.widget_search .search-field::-moz-placeholder, .comment-form-comment textarea::-moz-placeholder {
+.form-control::-moz-placeholder, #commentform .comment-form-author > input::-moz-placeholder,
+#commentform .comment-form-email > input::-moz-placeholder,
+#commentform .comment-form-url > input::-moz-placeholder, #commentform .comment-form-comment > textarea::-moz-placeholder, .widget.widget_search .search-field::-moz-placeholder {
   color: #999;
   opacity: 1;
 }
 /* line 107, ../bower_components/bootstrap-sass/assets/stylesheets/bootstrap/mixins/_vendor-prefixes.scss */
-.form-control:-ms-input-placeholder, .widget.widget_search .search-field:-ms-input-placeholder, .comment-form-comment textarea:-ms-input-placeholder {
+.form-control:-ms-input-placeholder, #commentform .comment-form-author > input:-ms-input-placeholder,
+#commentform .comment-form-email > input:-ms-input-placeholder,
+#commentform .comment-form-url > input:-ms-input-placeholder, #commentform .comment-form-comment > textarea:-ms-input-placeholder, .widget.widget_search .search-field:-ms-input-placeholder {
   color: #999;
 }
 /* line 108, ../bower_components/bootstrap-sass/assets/stylesheets/bootstrap/mixins/_vendor-prefixes.scss */
-.form-control::-webkit-input-placeholder, .widget.widget_search .search-field::-webkit-input-placeholder, .comment-form-comment textarea::-webkit-input-placeholder {
+.form-control::-webkit-input-placeholder, #commentform .comment-form-author > input::-webkit-input-placeholder,
+#commentform .comment-form-email > input::-webkit-input-placeholder,
+#commentform .comment-form-url > input::-webkit-input-placeholder, #commentform .comment-form-comment > textarea::-webkit-input-placeholder, .widget.widget_search .search-field::-webkit-input-placeholder {
   color: #999;
 }
 /* line 141, ../bower_components/bootstrap-sass/assets/stylesheets/bootstrap/_forms.scss */
-.form-control[disabled], .widget.widget_search [disabled].search-field, .comment-form-comment textarea[disabled], .form-control[readonly], .widget.widget_search [readonly].search-field, .comment-form-comment textarea[readonly], fieldset[disabled] .form-control, fieldset[disabled] .widget.widget_search .search-field, .widget.widget_search fieldset[disabled] .search-field, fieldset[disabled] .comment-form-comment textarea, .comment-form-comment fieldset[disabled] textarea {
+.form-control[disabled], #commentform .comment-form-author > input[disabled],
+#commentform .comment-form-email > input[disabled],
+#commentform .comment-form-url > input[disabled], #commentform .comment-form-comment > textarea[disabled], .widget.widget_search [disabled].search-field, .form-control[readonly], #commentform .comment-form-author > input[readonly],
+#commentform .comment-form-email > input[readonly],
+#commentform .comment-form-url > input[readonly], #commentform .comment-form-comment > textarea[readonly], .widget.widget_search [readonly].search-field, fieldset[disabled] .form-control, fieldset[disabled] #commentform .comment-form-author > input, #commentform fieldset[disabled] .comment-form-author > input,
+fieldset[disabled] #commentform .comment-form-email > input,
+#commentform fieldset[disabled] .comment-form-email > input,
+fieldset[disabled] #commentform .comment-form-url > input,
+#commentform fieldset[disabled] .comment-form-url > input, fieldset[disabled] #commentform .comment-form-comment > textarea, #commentform fieldset[disabled] .comment-form-comment > textarea, fieldset[disabled] .widget.widget_search .search-field, .widget.widget_search fieldset[disabled] .search-field {
   background-color: #eeeeee;
   opacity: 1;
 }
 /* line 148, ../bower_components/bootstrap-sass/assets/stylesheets/bootstrap/_forms.scss */
-.form-control[disabled], .widget.widget_search [disabled].search-field, .comment-form-comment textarea[disabled], fieldset[disabled] .form-control, fieldset[disabled] .widget.widget_search .search-field, .widget.widget_search fieldset[disabled] .search-field, fieldset[disabled] .comment-form-comment textarea, .comment-form-comment fieldset[disabled] textarea {
+.form-control[disabled], #commentform .comment-form-author > input[disabled],
+#commentform .comment-form-email > input[disabled],
+#commentform .comment-form-url > input[disabled], #commentform .comment-form-comment > textarea[disabled], .widget.widget_search [disabled].search-field, fieldset[disabled] .form-control, fieldset[disabled] #commentform .comment-form-author > input, #commentform fieldset[disabled] .comment-form-author > input,
+fieldset[disabled] #commentform .comment-form-email > input,
+#commentform fieldset[disabled] .comment-form-email > input,
+fieldset[disabled] #commentform .comment-form-url > input,
+#commentform fieldset[disabled] .comment-form-url > input, fieldset[disabled] #commentform .comment-form-comment > textarea, #commentform fieldset[disabled] .comment-form-comment > textarea, fieldset[disabled] .widget.widget_search .search-field, .widget.widget_search fieldset[disabled] .search-field {
   cursor: not-allowed;
 }
 
 /* line 157, ../bower_components/bootstrap-sass/assets/stylesheets/bootstrap/_forms.scss */
-textarea.form-control, .widget.widget_search textarea.search-field, .comment-form-comment textarea {
+textarea.form-control, #commentform .comment-form-comment > textarea, .widget.widget_search textarea.search-field {
   height: auto;
 }
 
@@ -3878,57 +3903,87 @@ input[type="search"] {
     line-height: 34px;
   }
   /* line 188, ../bower_components/bootstrap-sass/assets/stylesheets/bootstrap/_forms.scss */
-  input[type="date"].input-sm, .input-group-sm > input[type="date"].form-control, .widget.widget_search .input-group-sm > input[type="date"].search-field,
+  input[type="date"].input-sm, .input-group-sm > input[type="date"].form-control, #commentform .comment-form-author.input-group-sm > input[type="date"],
+  #commentform .comment-form-email.input-group-sm > input[type="date"],
+  #commentform .comment-form-url.input-group-sm > input[type="date"], .widget.widget_search .input-group-sm > input[type="date"].search-field,
   .input-group-sm > input[type="date"].input-group-addon,
   .input-group-sm > .input-group-btn > input[type="date"].btn,
+  #commentform .form-submit .input-group-sm > .input-group-btn > input[type="date"][type="submit"],
   .widget.widget_search .input-group-sm > .input-group-btn > input[type="date"].search-submit, .input-group-sm input[type="date"],
   input[type="time"].input-sm,
   .input-group-sm > input[type="time"].form-control,
+  #commentform .comment-form-author.input-group-sm > input[type="time"],
+  #commentform .comment-form-email.input-group-sm > input[type="time"],
+  #commentform .comment-form-url.input-group-sm > input[type="time"],
   .widget.widget_search .input-group-sm > input[type="time"].search-field,
   .input-group-sm > input[type="time"].input-group-addon,
   .input-group-sm > .input-group-btn > input[type="time"].btn,
+  #commentform .form-submit .input-group-sm > .input-group-btn > input[type="time"][type="submit"],
   .widget.widget_search .input-group-sm > .input-group-btn > input[type="time"].search-submit, .input-group-sm
   input[type="time"],
   input[type="datetime-local"].input-sm,
   .input-group-sm > input[type="datetime-local"].form-control,
+  #commentform .comment-form-author.input-group-sm > input[type="datetime-local"],
+  #commentform .comment-form-email.input-group-sm > input[type="datetime-local"],
+  #commentform .comment-form-url.input-group-sm > input[type="datetime-local"],
   .widget.widget_search .input-group-sm > input[type="datetime-local"].search-field,
   .input-group-sm > input[type="datetime-local"].input-group-addon,
   .input-group-sm > .input-group-btn > input[type="datetime-local"].btn,
+  #commentform .form-submit .input-group-sm > .input-group-btn > input[type="datetime-local"][type="submit"],
   .widget.widget_search .input-group-sm > .input-group-btn > input[type="datetime-local"].search-submit, .input-group-sm
   input[type="datetime-local"],
   input[type="month"].input-sm,
   .input-group-sm > input[type="month"].form-control,
+  #commentform .comment-form-author.input-group-sm > input[type="month"],
+  #commentform .comment-form-email.input-group-sm > input[type="month"],
+  #commentform .comment-form-url.input-group-sm > input[type="month"],
   .widget.widget_search .input-group-sm > input[type="month"].search-field,
   .input-group-sm > input[type="month"].input-group-addon,
   .input-group-sm > .input-group-btn > input[type="month"].btn,
+  #commentform .form-submit .input-group-sm > .input-group-btn > input[type="month"][type="submit"],
   .widget.widget_search .input-group-sm > .input-group-btn > input[type="month"].search-submit, .input-group-sm
   input[type="month"] {
     line-height: 30px;
   }
   /* line 193, ../bower_components/bootstrap-sass/assets/stylesheets/bootstrap/_forms.scss */
-  input[type="date"].input-lg, .input-group-lg > input[type="date"].form-control, .widget.widget_search .input-group-lg > input[type="date"].search-field,
+  input[type="date"].input-lg, .input-group-lg > input[type="date"].form-control, #commentform .comment-form-author.input-group-lg > input[type="date"],
+  #commentform .comment-form-email.input-group-lg > input[type="date"],
+  #commentform .comment-form-url.input-group-lg > input[type="date"], .widget.widget_search .input-group-lg > input[type="date"].search-field,
   .input-group-lg > input[type="date"].input-group-addon,
   .input-group-lg > .input-group-btn > input[type="date"].btn,
+  #commentform .form-submit .input-group-lg > .input-group-btn > input[type="date"][type="submit"],
   .widget.widget_search .input-group-lg > .input-group-btn > input[type="date"].search-submit, .input-group-lg input[type="date"],
   input[type="time"].input-lg,
   .input-group-lg > input[type="time"].form-control,
+  #commentform .comment-form-author.input-group-lg > input[type="time"],
+  #commentform .comment-form-email.input-group-lg > input[type="time"],
+  #commentform .comment-form-url.input-group-lg > input[type="time"],
   .widget.widget_search .input-group-lg > input[type="time"].search-field,
   .input-group-lg > input[type="time"].input-group-addon,
   .input-group-lg > .input-group-btn > input[type="time"].btn,
+  #commentform .form-submit .input-group-lg > .input-group-btn > input[type="time"][type="submit"],
   .widget.widget_search .input-group-lg > .input-group-btn > input[type="time"].search-submit, .input-group-lg
   input[type="time"],
   input[type="datetime-local"].input-lg,
   .input-group-lg > input[type="datetime-local"].form-control,
+  #commentform .comment-form-author.input-group-lg > input[type="datetime-local"],
+  #commentform .comment-form-email.input-group-lg > input[type="datetime-local"],
+  #commentform .comment-form-url.input-group-lg > input[type="datetime-local"],
   .widget.widget_search .input-group-lg > input[type="datetime-local"].search-field,
   .input-group-lg > input[type="datetime-local"].input-group-addon,
   .input-group-lg > .input-group-btn > input[type="datetime-local"].btn,
+  #commentform .form-submit .input-group-lg > .input-group-btn > input[type="datetime-local"][type="submit"],
   .widget.widget_search .input-group-lg > .input-group-btn > input[type="datetime-local"].search-submit, .input-group-lg
   input[type="datetime-local"],
   input[type="month"].input-lg,
   .input-group-lg > input[type="month"].form-control,
+  #commentform .comment-form-author.input-group-lg > input[type="month"],
+  #commentform .comment-form-email.input-group-lg > input[type="month"],
+  #commentform .comment-form-url.input-group-lg > input[type="month"],
   .widget.widget_search .input-group-lg > input[type="month"].search-field,
   .input-group-lg > input[type="month"].input-group-addon,
   .input-group-lg > .input-group-btn > input[type="month"].btn,
+  #commentform .form-submit .input-group-lg > .input-group-btn > input[type="month"][type="submit"],
   .widget.widget_search .input-group-lg > .input-group-btn > input[type="month"].search-submit, .input-group-lg
   input[type="month"] {
     line-height: 46px;
@@ -4022,21 +4077,30 @@ input[type="checkbox"] {
   min-height: 34px;
 }
 /* line 306, ../bower_components/bootstrap-sass/assets/stylesheets/bootstrap/_forms.scss */
-.form-control-static.input-lg, .input-group-lg > .form-control-static.form-control, .widget.widget_search .input-group-lg > .form-control-static.search-field, .comment-form-comment .input-group-lg > textarea.form-control-static,
+.form-control-static.input-lg, .input-group-lg > .form-control-static.form-control, #commentform .comment-form-author.input-group-lg > input.form-control-static,
+#commentform .comment-form-email.input-group-lg > input.form-control-static,
+#commentform .comment-form-url.input-group-lg > input.form-control-static, #commentform .comment-form-comment.input-group-lg > textarea.form-control-static, .widget.widget_search .input-group-lg > .form-control-static.search-field,
 .input-group-lg > .form-control-static.input-group-addon,
 .input-group-lg > .input-group-btn > .form-control-static.btn,
-.widget.widget_search .input-group-lg > .input-group-btn > .form-control-static.search-submit, .form-control-static.input-sm, .input-group-sm > .form-control-static.form-control, .widget.widget_search .input-group-sm > .form-control-static.search-field, .comment-form-comment .input-group-sm > textarea.form-control-static,
+#commentform .form-submit .input-group-lg > .input-group-btn > input.form-control-static[type="submit"],
+.widget.widget_search .input-group-lg > .input-group-btn > .form-control-static.search-submit, .form-control-static.input-sm, .input-group-sm > .form-control-static.form-control, #commentform .comment-form-author.input-group-sm > input.form-control-static,
+#commentform .comment-form-email.input-group-sm > input.form-control-static,
+#commentform .comment-form-url.input-group-sm > input.form-control-static, #commentform .comment-form-comment.input-group-sm > textarea.form-control-static, .widget.widget_search .input-group-sm > .form-control-static.search-field,
 .input-group-sm > .form-control-static.input-group-addon,
 .input-group-sm > .input-group-btn > .form-control-static.btn,
+#commentform .form-submit .input-group-sm > .input-group-btn > input.form-control-static[type="submit"],
 .widget.widget_search .input-group-sm > .input-group-btn > .form-control-static.search-submit {
   padding-left: 0;
   padding-right: 0;
 }
 
 /* line 71, ../bower_components/bootstrap-sass/assets/stylesheets/bootstrap/mixins/_forms.scss */
-.input-sm, .input-group-sm > .form-control, .widget.widget_search .input-group-sm > .search-field, .comment-form-comment .input-group-sm > textarea,
+.input-sm, .input-group-sm > .form-control, #commentform .comment-form-author.input-group-sm > input,
+#commentform .comment-form-email.input-group-sm > input,
+#commentform .comment-form-url.input-group-sm > input, #commentform .comment-form-comment.input-group-sm > textarea, .widget.widget_search .input-group-sm > .search-field,
 .input-group-sm > .input-group-addon,
 .input-group-sm > .input-group-btn > .btn,
+#commentform .form-submit .input-group-sm > .input-group-btn > input[type="submit"],
 .widget.widget_search .input-group-sm > .input-group-btn > .search-submit {
   height: 30px;
   padding: 5px 10px;
@@ -4055,7 +4119,7 @@ select.input-sm, .input-group-sm > select.form-control, .widget.widget_search .i
 }
 
 /* line 84, ../bower_components/bootstrap-sass/assets/stylesheets/bootstrap/mixins/_forms.scss */
-textarea.input-sm, .input-group-sm > textarea.form-control, .widget.widget_search .input-group-sm > textarea.search-field, .comment-form-comment .input-group-sm > textarea,
+textarea.input-sm, .input-group-sm > textarea.form-control, #commentform .comment-form-comment.input-group-sm > textarea, .widget.widget_search .input-group-sm > textarea.search-field,
 .input-group-sm > textarea.input-group-addon,
 .input-group-sm > .input-group-btn > textarea.btn,
 .widget.widget_search .input-group-sm > .input-group-btn > textarea.search-submit,
@@ -4069,7 +4133,11 @@ select[multiple].input-sm,
 }
 
 /* line 71, ../bower_components/bootstrap-sass/assets/stylesheets/bootstrap/mixins/_forms.scss */
-.form-group-sm .form-control, .form-group-sm .widget.widget_search .search-field, .widget.widget_search .form-group-sm .search-field, .form-group-sm .comment-form-comment textarea, .comment-form-comment .form-group-sm textarea {
+.form-group-sm .form-control, .form-group-sm #commentform .comment-form-author > input, #commentform .form-group-sm .comment-form-author > input,
+.form-group-sm #commentform .comment-form-email > input,
+#commentform .form-group-sm .comment-form-email > input,
+.form-group-sm #commentform .comment-form-url > input,
+#commentform .form-group-sm .comment-form-url > input, .form-group-sm #commentform .comment-form-comment > textarea, #commentform .form-group-sm .comment-form-comment > textarea, .form-group-sm .widget.widget_search .search-field, .widget.widget_search .form-group-sm .search-field {
   height: 30px;
   padding: 5px 10px;
   font-size: 12px;
@@ -4082,7 +4150,7 @@ select[multiple].input-sm,
   line-height: 30px;
 }
 /* line 84, ../bower_components/bootstrap-sass/assets/stylesheets/bootstrap/mixins/_forms.scss */
-.form-group-sm textarea.form-control, .form-group-sm .widget.widget_search textarea.search-field, .widget.widget_search .form-group-sm textarea.search-field, .form-group-sm .comment-form-comment textarea, .comment-form-comment .form-group-sm textarea,
+.form-group-sm textarea.form-control, .form-group-sm #commentform .comment-form-comment > textarea, #commentform .form-group-sm .comment-form-comment > textarea, .form-group-sm .widget.widget_search textarea.search-field, .widget.widget_search .form-group-sm textarea.search-field,
 .form-group-sm select[multiple].form-control,
 .form-group-sm .widget.widget_search select[multiple].search-field,
 .widget.widget_search .form-group-sm select[multiple].search-field {
@@ -4098,9 +4166,12 @@ select[multiple].input-sm,
 }
 
 /* line 71, ../bower_components/bootstrap-sass/assets/stylesheets/bootstrap/mixins/_forms.scss */
-.input-lg, .input-group-lg > .form-control, .widget.widget_search .input-group-lg > .search-field, .comment-form-comment .input-group-lg > textarea,
+.input-lg, .input-group-lg > .form-control, #commentform .comment-form-author.input-group-lg > input,
+#commentform .comment-form-email.input-group-lg > input,
+#commentform .comment-form-url.input-group-lg > input, #commentform .comment-form-comment.input-group-lg > textarea, .widget.widget_search .input-group-lg > .search-field,
 .input-group-lg > .input-group-addon,
 .input-group-lg > .input-group-btn > .btn,
+#commentform .form-submit .input-group-lg > .input-group-btn > input[type="submit"],
 .widget.widget_search .input-group-lg > .input-group-btn > .search-submit {
   height: 46px;
   padding: 10px 16px;
@@ -4119,7 +4190,7 @@ select.input-lg, .input-group-lg > select.form-control, .widget.widget_search .i
 }
 
 /* line 84, ../bower_components/bootstrap-sass/assets/stylesheets/bootstrap/mixins/_forms.scss */
-textarea.input-lg, .input-group-lg > textarea.form-control, .widget.widget_search .input-group-lg > textarea.search-field, .comment-form-comment .input-group-lg > textarea,
+textarea.input-lg, .input-group-lg > textarea.form-control, #commentform .comment-form-comment.input-group-lg > textarea, .widget.widget_search .input-group-lg > textarea.search-field,
 .input-group-lg > textarea.input-group-addon,
 .input-group-lg > .input-group-btn > textarea.btn,
 .widget.widget_search .input-group-lg > .input-group-btn > textarea.search-submit,
@@ -4133,7 +4204,11 @@ select[multiple].input-lg,
 }
 
 /* line 71, ../bower_components/bootstrap-sass/assets/stylesheets/bootstrap/mixins/_forms.scss */
-.form-group-lg .form-control, .form-group-lg .widget.widget_search .search-field, .widget.widget_search .form-group-lg .search-field, .form-group-lg .comment-form-comment textarea, .comment-form-comment .form-group-lg textarea {
+.form-group-lg .form-control, .form-group-lg #commentform .comment-form-author > input, #commentform .form-group-lg .comment-form-author > input,
+.form-group-lg #commentform .comment-form-email > input,
+#commentform .form-group-lg .comment-form-email > input,
+.form-group-lg #commentform .comment-form-url > input,
+#commentform .form-group-lg .comment-form-url > input, .form-group-lg #commentform .comment-form-comment > textarea, #commentform .form-group-lg .comment-form-comment > textarea, .form-group-lg .widget.widget_search .search-field, .widget.widget_search .form-group-lg .search-field {
   height: 46px;
   padding: 10px 16px;
   font-size: 18px;
@@ -4146,7 +4221,7 @@ select[multiple].input-lg,
   line-height: 46px;
 }
 /* line 84, ../bower_components/bootstrap-sass/assets/stylesheets/bootstrap/mixins/_forms.scss */
-.form-group-lg textarea.form-control, .form-group-lg .widget.widget_search textarea.search-field, .widget.widget_search .form-group-lg textarea.search-field, .form-group-lg .comment-form-comment textarea, .comment-form-comment .form-group-lg textarea,
+.form-group-lg textarea.form-control, .form-group-lg #commentform .comment-form-comment > textarea, #commentform .form-group-lg .comment-form-comment > textarea, .form-group-lg .widget.widget_search textarea.search-field, .widget.widget_search .form-group-lg textarea.search-field,
 .form-group-lg select[multiple].form-control,
 .form-group-lg .widget.widget_search select[multiple].search-field,
 .widget.widget_search .form-group-lg select[multiple].search-field {
@@ -4166,7 +4241,11 @@ select[multiple].input-lg,
   position: relative;
 }
 /* line 360, ../bower_components/bootstrap-sass/assets/stylesheets/bootstrap/_forms.scss */
-.has-feedback .form-control, .has-feedback .widget.widget_search .search-field, .widget.widget_search .has-feedback .search-field, .has-feedback .comment-form-comment textarea, .comment-form-comment .has-feedback textarea {
+.has-feedback .form-control, .has-feedback #commentform .comment-form-author > input, #commentform .has-feedback .comment-form-author > input,
+.has-feedback #commentform .comment-form-email > input,
+#commentform .has-feedback .comment-form-email > input,
+.has-feedback #commentform .comment-form-url > input,
+#commentform .has-feedback .comment-form-url > input, .has-feedback #commentform .comment-form-comment > textarea, #commentform .has-feedback .comment-form-comment > textarea, .has-feedback .widget.widget_search .search-field, .widget.widget_search .has-feedback .search-field {
   padding-right: 42.5px;
 }
 
@@ -4185,9 +4264,12 @@ select[multiple].input-lg,
 }
 
 /* line 377, ../bower_components/bootstrap-sass/assets/stylesheets/bootstrap/_forms.scss */
-.input-lg + .form-control-feedback, .input-group-lg > .form-control + .form-control-feedback, .widget.widget_search .input-group-lg > .search-field + .form-control-feedback, .comment-form-comment .input-group-lg > textarea + .form-control-feedback,
+.input-lg + .form-control-feedback, .input-group-lg > .form-control + .form-control-feedback, #commentform .comment-form-author.input-group-lg > input + .form-control-feedback,
+#commentform .comment-form-email.input-group-lg > input + .form-control-feedback,
+#commentform .comment-form-url.input-group-lg > input + .form-control-feedback, #commentform .comment-form-comment.input-group-lg > textarea + .form-control-feedback, .widget.widget_search .input-group-lg > .search-field + .form-control-feedback,
 .input-group-lg > .input-group-addon + .form-control-feedback,
 .input-group-lg > .input-group-btn > .btn + .form-control-feedback,
+#commentform .form-submit .input-group-lg > .input-group-btn > input[type="submit"] + .form-control-feedback,
 .widget.widget_search .input-group-lg > .input-group-btn > .search-submit + .form-control-feedback {
   width: 46px;
   height: 46px;
@@ -4195,9 +4277,12 @@ select[multiple].input-lg,
 }
 
 /* line 382, ../bower_components/bootstrap-sass/assets/stylesheets/bootstrap/_forms.scss */
-.input-sm + .form-control-feedback, .input-group-sm > .form-control + .form-control-feedback, .widget.widget_search .input-group-sm > .search-field + .form-control-feedback, .comment-form-comment .input-group-sm > textarea + .form-control-feedback,
+.input-sm + .form-control-feedback, .input-group-sm > .form-control + .form-control-feedback, #commentform .comment-form-author.input-group-sm > input + .form-control-feedback,
+#commentform .comment-form-email.input-group-sm > input + .form-control-feedback,
+#commentform .comment-form-url.input-group-sm > input + .form-control-feedback, #commentform .comment-form-comment.input-group-sm > textarea + .form-control-feedback, .widget.widget_search .input-group-sm > .search-field + .form-control-feedback,
 .input-group-sm > .input-group-addon + .form-control-feedback,
 .input-group-sm > .input-group-btn > .btn + .form-control-feedback,
+#commentform .form-submit .input-group-sm > .input-group-btn > input[type="submit"] + .form-control-feedback,
 .widget.widget_search .input-group-sm > .input-group-btn > .search-submit + .form-control-feedback {
   width: 30px;
   height: 30px;
@@ -4214,13 +4299,21 @@ select[multiple].input-lg,
   color: #3c763d;
 }
 /* line 21, ../bower_components/bootstrap-sass/assets/stylesheets/bootstrap/mixins/_forms.scss */
-.has-success .form-control, .has-success .widget.widget_search .search-field, .widget.widget_search .has-success .search-field, .has-success .comment-form-comment textarea, .comment-form-comment .has-success textarea {
+.has-success .form-control, .has-success #commentform .comment-form-author > input, #commentform .has-success .comment-form-author > input,
+.has-success #commentform .comment-form-email > input,
+#commentform .has-success .comment-form-email > input,
+.has-success #commentform .comment-form-url > input,
+#commentform .has-success .comment-form-url > input, .has-success #commentform .comment-form-comment > textarea, #commentform .has-success .comment-form-comment > textarea, .has-success .widget.widget_search .search-field, .widget.widget_search .has-success .search-field {
   border-color: #3c763d;
   -webkit-box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075);
   box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075);
 }
 /* line 24, ../bower_components/bootstrap-sass/assets/stylesheets/bootstrap/mixins/_forms.scss */
-.has-success .form-control:focus, .has-success .widget.widget_search .search-field:focus, .widget.widget_search .has-success .search-field:focus, .has-success .comment-form-comment textarea:focus, .comment-form-comment .has-success textarea:focus {
+.has-success .form-control:focus, .has-success #commentform .comment-form-author > input:focus, #commentform .has-success .comment-form-author > input:focus,
+.has-success #commentform .comment-form-email > input:focus,
+#commentform .has-success .comment-form-email > input:focus,
+.has-success #commentform .comment-form-url > input:focus,
+#commentform .has-success .comment-form-url > input:focus, .has-success #commentform .comment-form-comment > textarea:focus, #commentform .has-success .comment-form-comment > textarea:focus, .has-success .widget.widget_search .search-field:focus, .widget.widget_search .has-success .search-field:focus {
   border-color: #2b542c;
   -webkit-box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075), 0 0 6px #67b168;
   box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075), 0 0 6px #67b168;
@@ -4246,13 +4339,21 @@ select[multiple].input-lg,
   color: #8a6d3b;
 }
 /* line 21, ../bower_components/bootstrap-sass/assets/stylesheets/bootstrap/mixins/_forms.scss */
-.has-warning .form-control, .has-warning .widget.widget_search .search-field, .widget.widget_search .has-warning .search-field, .has-warning .comment-form-comment textarea, .comment-form-comment .has-warning textarea {
+.has-warning .form-control, .has-warning #commentform .comment-form-author > input, #commentform .has-warning .comment-form-author > input,
+.has-warning #commentform .comment-form-email > input,
+#commentform .has-warning .comment-form-email > input,
+.has-warning #commentform .comment-form-url > input,
+#commentform .has-warning .comment-form-url > input, .has-warning #commentform .comment-form-comment > textarea, #commentform .has-warning .comment-form-comment > textarea, .has-warning .widget.widget_search .search-field, .widget.widget_search .has-warning .search-field {
   border-color: #8a6d3b;
   -webkit-box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075);
   box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075);
 }
 /* line 24, ../bower_components/bootstrap-sass/assets/stylesheets/bootstrap/mixins/_forms.scss */
-.has-warning .form-control:focus, .has-warning .widget.widget_search .search-field:focus, .widget.widget_search .has-warning .search-field:focus, .has-warning .comment-form-comment textarea:focus, .comment-form-comment .has-warning textarea:focus {
+.has-warning .form-control:focus, .has-warning #commentform .comment-form-author > input:focus, #commentform .has-warning .comment-form-author > input:focus,
+.has-warning #commentform .comment-form-email > input:focus,
+#commentform .has-warning .comment-form-email > input:focus,
+.has-warning #commentform .comment-form-url > input:focus,
+#commentform .has-warning .comment-form-url > input:focus, .has-warning #commentform .comment-form-comment > textarea:focus, #commentform .has-warning .comment-form-comment > textarea:focus, .has-warning .widget.widget_search .search-field:focus, .widget.widget_search .has-warning .search-field:focus {
   border-color: #66512c;
   -webkit-box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075), 0 0 6px #c0a16b;
   box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075), 0 0 6px #c0a16b;
@@ -4278,13 +4379,21 @@ select[multiple].input-lg,
   color: #a94442;
 }
 /* line 21, ../bower_components/bootstrap-sass/assets/stylesheets/bootstrap/mixins/_forms.scss */
-.has-error .form-control, .has-error .widget.widget_search .search-field, .widget.widget_search .has-error .search-field, .has-error .comment-form-comment textarea, .comment-form-comment .has-error textarea {
+.has-error .form-control, .has-error #commentform .comment-form-author > input, #commentform .has-error .comment-form-author > input,
+.has-error #commentform .comment-form-email > input,
+#commentform .has-error .comment-form-email > input,
+.has-error #commentform .comment-form-url > input,
+#commentform .has-error .comment-form-url > input, .has-error #commentform .comment-form-comment > textarea, #commentform .has-error .comment-form-comment > textarea, .has-error .widget.widget_search .search-field, .widget.widget_search .has-error .search-field {
   border-color: #a94442;
   -webkit-box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075);
   box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075);
 }
 /* line 24, ../bower_components/bootstrap-sass/assets/stylesheets/bootstrap/mixins/_forms.scss */
-.has-error .form-control:focus, .has-error .widget.widget_search .search-field:focus, .widget.widget_search .has-error .search-field:focus, .has-error .comment-form-comment textarea:focus, .comment-form-comment .has-error textarea:focus {
+.has-error .form-control:focus, .has-error #commentform .comment-form-author > input:focus, #commentform .has-error .comment-form-author > input:focus,
+.has-error #commentform .comment-form-email > input:focus,
+#commentform .has-error .comment-form-email > input:focus,
+.has-error #commentform .comment-form-url > input:focus,
+#commentform .has-error .comment-form-url > input:focus, .has-error #commentform .comment-form-comment > textarea:focus, #commentform .has-error .comment-form-comment > textarea:focus, .has-error .widget.widget_search .search-field:focus, .widget.widget_search .has-error .search-field:focus {
   border-color: #843534;
   -webkit-box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075), 0 0 6px #ce8483;
   box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075), 0 0 6px #ce8483;
@@ -4325,7 +4434,11 @@ select[multiple].input-lg,
     vertical-align: middle;
   }
   /* line 448, ../bower_components/bootstrap-sass/assets/stylesheets/bootstrap/_forms.scss */
-  .form-inline .form-control, .form-inline .widget.widget_search .search-field, .widget.widget_search .form-inline .search-field, .form-inline .comment-form-comment textarea, .comment-form-comment .form-inline textarea {
+  .form-inline .form-control, .form-inline #commentform .comment-form-author > input, #commentform .form-inline .comment-form-author > input,
+  .form-inline #commentform .comment-form-email > input,
+  #commentform .form-inline .comment-form-email > input,
+  .form-inline #commentform .comment-form-url > input,
+  #commentform .form-inline .comment-form-url > input, .form-inline #commentform .comment-form-comment > textarea, #commentform .form-inline .comment-form-comment > textarea, .form-inline .widget.widget_search .search-field, .widget.widget_search .form-inline .search-field {
     display: inline-block;
     width: auto;
     vertical-align: middle;
@@ -4343,14 +4456,24 @@ select[multiple].input-lg,
   .form-inline .input-group .input-group-addon,
   .form-inline .input-group .input-group-btn,
   .form-inline .input-group .form-control,
+  .form-inline .input-group #commentform .comment-form-author > input,
+  #commentform .form-inline .input-group .comment-form-author > input,
+  .form-inline .input-group #commentform .comment-form-email > input,
+  #commentform .form-inline .input-group .comment-form-email > input,
+  .form-inline .input-group #commentform .comment-form-url > input,
+  #commentform .form-inline .input-group .comment-form-url > input,
+  .form-inline .input-group #commentform .comment-form-comment > textarea,
+  #commentform .form-inline .input-group .comment-form-comment > textarea,
   .form-inline .input-group .widget.widget_search .search-field,
-  .widget.widget_search .form-inline .input-group .search-field,
-  .form-inline .input-group .comment-form-comment textarea,
-  .comment-form-comment .form-inline .input-group textarea {
+  .widget.widget_search .form-inline .input-group .search-field {
     width: auto;
   }
   /* line 471, ../bower_components/bootstrap-sass/assets/stylesheets/bootstrap/_forms.scss */
-  .form-inline .input-group > .form-control, .form-inline .widget.widget_search .input-group > .search-field, .widget.widget_search .form-inline .input-group > .search-field, .form-inline .comment-form-comment .input-group > textarea, .comment-form-comment .form-inline .input-group > textarea {
+  .form-inline .input-group > .form-control, .form-inline #commentform .comment-form-author.input-group > input, #commentform .form-inline .comment-form-author.input-group > input,
+  .form-inline #commentform .comment-form-email.input-group > input,
+  #commentform .form-inline .comment-form-email.input-group > input,
+  .form-inline #commentform .comment-form-url.input-group > input,
+  #commentform .form-inline .comment-form-url.input-group > input, .form-inline #commentform .comment-form-comment.input-group > textarea, #commentform .form-inline .comment-form-comment.input-group > textarea, .form-inline .widget.widget_search .input-group > .search-field, .widget.widget_search .form-inline .input-group > .search-field {
     width: 100%;
   }
   /* line 475, ../bower_components/bootstrap-sass/assets/stylesheets/bootstrap/_forms.scss */
@@ -4437,7 +4560,7 @@ select[multiple].input-lg,
 }
 
 /* line 9, ../bower_components/bootstrap-sass/assets/stylesheets/bootstrap/_buttons.scss */
-.btn, .widget.widget_search .search-submit {
+.btn, #commentform .form-submit input[type="submit"], .widget.widget_search .search-submit {
   display: inline-block;
   margin-bottom: 0;
   font-weight: normal;
@@ -4458,25 +4581,25 @@ select[multiple].input-lg,
   user-select: none;
 }
 /* line 26, ../bower_components/bootstrap-sass/assets/stylesheets/bootstrap/_buttons.scss */
-.btn:focus, .widget.widget_search .search-submit:focus, .btn.focus, .widget.widget_search .focus.search-submit, .btn:active:focus, .widget.widget_search .search-submit:active:focus, .btn:active.focus, .widget.widget_search .search-submit:active.focus, .btn.active:focus, .widget.widget_search .active.search-submit:focus, .btn.active.focus, .widget.widget_search .active.focus.search-submit {
+.btn:focus, #commentform .form-submit input[type="submit"]:focus, .widget.widget_search .search-submit:focus, .btn.focus, #commentform .form-submit input.focus[type="submit"], .widget.widget_search .focus.search-submit, .btn:active:focus, #commentform .form-submit input[type="submit"]:active:focus, .widget.widget_search .search-submit:active:focus, .btn:active.focus, #commentform .form-submit input[type="submit"]:active.focus, .widget.widget_search .search-submit:active.focus, .btn.active:focus, #commentform .form-submit input.active[type="submit"]:focus, .widget.widget_search .active.search-submit:focus, .btn.active.focus, #commentform .form-submit input.active.focus[type="submit"], .widget.widget_search .active.focus.search-submit {
   outline: thin dotted;
   outline: 5px auto -webkit-focus-ring-color;
   outline-offset: -2px;
 }
 /* line 32, ../bower_components/bootstrap-sass/assets/stylesheets/bootstrap/_buttons.scss */
-.btn:hover, .widget.widget_search .search-submit:hover, .btn:focus, .widget.widget_search .search-submit:focus, .btn.focus, .widget.widget_search .focus.search-submit {
+.btn:hover, #commentform .form-submit input[type="submit"]:hover, .widget.widget_search .search-submit:hover, .btn:focus, #commentform .form-submit input[type="submit"]:focus, .widget.widget_search .search-submit:focus, .btn.focus, #commentform .form-submit input.focus[type="submit"], .widget.widget_search .focus.search-submit {
   color: #333;
   text-decoration: none;
 }
 /* line 39, ../bower_components/bootstrap-sass/assets/stylesheets/bootstrap/_buttons.scss */
-.btn:active, .widget.widget_search .search-submit:active, .btn.active, .widget.widget_search .active.search-submit {
+.btn:active, #commentform .form-submit input[type="submit"]:active, .widget.widget_search .search-submit:active, .btn.active, #commentform .form-submit input.active[type="submit"], .widget.widget_search .active.search-submit {
   outline: 0;
   background-image: none;
   -webkit-box-shadow: inset 0 3px 5px rgba(0, 0, 0, 0.125);
   box-shadow: inset 0 3px 5px rgba(0, 0, 0, 0.125);
 }
 /* line 46, ../bower_components/bootstrap-sass/assets/stylesheets/bootstrap/_buttons.scss */
-.btn.disabled, .widget.widget_search .disabled.search-submit, .btn[disabled], .widget.widget_search [disabled].search-submit, fieldset[disabled] .btn, fieldset[disabled] .widget.widget_search .search-submit, .widget.widget_search fieldset[disabled] .search-submit {
+.btn.disabled, #commentform .form-submit input.disabled[type="submit"], .widget.widget_search .disabled.search-submit, .btn[disabled], #commentform .form-submit input[disabled][type="submit"], .widget.widget_search [disabled].search-submit, fieldset[disabled] .btn, fieldset[disabled] #commentform .form-submit input[type="submit"], #commentform .form-submit fieldset[disabled] input[type="submit"], fieldset[disabled] .widget.widget_search .search-submit, .widget.widget_search fieldset[disabled] .search-submit {
   cursor: not-allowed;
   pointer-events: none;
   opacity: 0.65;
@@ -4513,28 +4636,28 @@ select[multiple].input-lg,
 }
 
 /* line 63, ../bower_components/bootstrap-sass/assets/stylesheets/bootstrap/_buttons.scss */
-.btn-primary, .widget.widget_search .search-submit {
+.btn-primary, #commentform .form-submit input[type="submit"], .widget.widget_search .search-submit {
   color: #fff;
   background-color: #337ab7;
   border-color: #2e6da4;
 }
 /* line 11, ../bower_components/bootstrap-sass/assets/stylesheets/bootstrap/mixins/_buttons.scss */
-.btn-primary:hover, .widget.widget_search .search-submit:hover, .btn-primary:focus, .widget.widget_search .search-submit:focus, .btn-primary.focus, .widget.widget_search .focus.search-submit, .btn-primary:active, .widget.widget_search .search-submit:active, .btn-primary.active, .widget.widget_search .active.search-submit, .open > .btn-primary.dropdown-toggle, .widget.widget_search .open > .dropdown-toggle.search-submit {
+.btn-primary:hover, #commentform .form-submit input[type="submit"]:hover, .widget.widget_search .search-submit:hover, .btn-primary:focus, #commentform .form-submit input[type="submit"]:focus, .widget.widget_search .search-submit:focus, .btn-primary.focus, #commentform .form-submit input.focus[type="submit"], .widget.widget_search .focus.search-submit, .btn-primary:active, #commentform .form-submit input[type="submit"]:active, .widget.widget_search .search-submit:active, .btn-primary.active, #commentform .form-submit input.active[type="submit"], .widget.widget_search .active.search-submit, .open > .btn-primary.dropdown-toggle, #commentform .form-submit .open > input.dropdown-toggle[type="submit"], .widget.widget_search .open > .dropdown-toggle.search-submit {
   color: #fff;
   background-color: #286090;
   border-color: #204d74;
 }
 /* line 21, ../bower_components/bootstrap-sass/assets/stylesheets/bootstrap/mixins/_buttons.scss */
-.btn-primary:active, .widget.widget_search .search-submit:active, .btn-primary.active, .widget.widget_search .active.search-submit, .open > .btn-primary.dropdown-toggle, .widget.widget_search .open > .dropdown-toggle.search-submit {
+.btn-primary:active, #commentform .form-submit input[type="submit"]:active, .widget.widget_search .search-submit:active, .btn-primary.active, #commentform .form-submit input.active[type="submit"], .widget.widget_search .active.search-submit, .open > .btn-primary.dropdown-toggle, #commentform .form-submit .open > input.dropdown-toggle[type="submit"], .widget.widget_search .open > .dropdown-toggle.search-submit {
   background-image: none;
 }
 /* line 29, ../bower_components/bootstrap-sass/assets/stylesheets/bootstrap/mixins/_buttons.scss */
-.btn-primary.disabled, .widget.widget_search .disabled.search-submit, .btn-primary.disabled:hover, .widget.widget_search .disabled.search-submit:hover, .btn-primary.disabled:focus, .widget.widget_search .disabled.search-submit:focus, .btn-primary.disabled.focus, .widget.widget_search .disabled.focus.search-submit, .btn-primary.disabled:active, .widget.widget_search .disabled.search-submit:active, .btn-primary.disabled.active, .widget.widget_search .disabled.active.search-submit, .btn-primary[disabled], .widget.widget_search [disabled].search-submit, .btn-primary[disabled]:hover, .widget.widget_search [disabled].search-submit:hover, .btn-primary[disabled]:focus, .widget.widget_search [disabled].search-submit:focus, .btn-primary[disabled].focus, .widget.widget_search [disabled].focus.search-submit, .btn-primary[disabled]:active, .widget.widget_search [disabled].search-submit:active, .btn-primary[disabled].active, .widget.widget_search [disabled].active.search-submit, fieldset[disabled] .btn-primary, fieldset[disabled] .widget.widget_search .search-submit, .widget.widget_search fieldset[disabled] .search-submit, fieldset[disabled] .btn-primary:hover, fieldset[disabled] .widget.widget_search .search-submit:hover, .widget.widget_search fieldset[disabled] .search-submit:hover, fieldset[disabled] .btn-primary:focus, fieldset[disabled] .widget.widget_search .search-submit:focus, .widget.widget_search fieldset[disabled] .search-submit:focus, fieldset[disabled] .btn-primary.focus, fieldset[disabled] .widget.widget_search .focus.search-submit, .widget.widget_search fieldset[disabled] .focus.search-submit, fieldset[disabled] .btn-primary:active, fieldset[disabled] .widget.widget_search .search-submit:active, .widget.widget_search fieldset[disabled] .search-submit:active, fieldset[disabled] .btn-primary.active, fieldset[disabled] .widget.widget_search .active.search-submit, .widget.widget_search fieldset[disabled] .active.search-submit {
+.btn-primary.disabled, #commentform .form-submit input.disabled[type="submit"], .widget.widget_search .disabled.search-submit, .btn-primary.disabled:hover, #commentform .form-submit input.disabled[type="submit"]:hover, .widget.widget_search .disabled.search-submit:hover, .btn-primary.disabled:focus, #commentform .form-submit input.disabled[type="submit"]:focus, .widget.widget_search .disabled.search-submit:focus, .btn-primary.disabled.focus, #commentform .form-submit input.disabled.focus[type="submit"], .widget.widget_search .disabled.focus.search-submit, .btn-primary.disabled:active, #commentform .form-submit input.disabled[type="submit"]:active, .widget.widget_search .disabled.search-submit:active, .btn-primary.disabled.active, #commentform .form-submit input.disabled.active[type="submit"], .widget.widget_search .disabled.active.search-submit, .btn-primary[disabled], #commentform .form-submit input[disabled][type="submit"], .widget.widget_search [disabled].search-submit, .btn-primary[disabled]:hover, #commentform .form-submit input[disabled][type="submit"]:hover, .widget.widget_search [disabled].search-submit:hover, .btn-primary[disabled]:focus, #commentform .form-submit input[disabled][type="submit"]:focus, .widget.widget_search [disabled].search-submit:focus, .btn-primary[disabled].focus, #commentform .form-submit input[disabled].focus[type="submit"], .widget.widget_search [disabled].focus.search-submit, .btn-primary[disabled]:active, #commentform .form-submit input[disabled][type="submit"]:active, .widget.widget_search [disabled].search-submit:active, .btn-primary[disabled].active, #commentform .form-submit input[disabled].active[type="submit"], .widget.widget_search [disabled].active.search-submit, fieldset[disabled] .btn-primary, fieldset[disabled] #commentform .form-submit input[type="submit"], #commentform .form-submit fieldset[disabled] input[type="submit"], fieldset[disabled] .widget.widget_search .search-submit, .widget.widget_search fieldset[disabled] .search-submit, fieldset[disabled] .btn-primary:hover, fieldset[disabled] #commentform .form-submit input[type="submit"]:hover, #commentform .form-submit fieldset[disabled] input[type="submit"]:hover, fieldset[disabled] .widget.widget_search .search-submit:hover, .widget.widget_search fieldset[disabled] .search-submit:hover, fieldset[disabled] .btn-primary:focus, fieldset[disabled] #commentform .form-submit input[type="submit"]:focus, #commentform .form-submit fieldset[disabled] input[type="submit"]:focus, fieldset[disabled] .widget.widget_search .search-submit:focus, .widget.widget_search fieldset[disabled] .search-submit:focus, fieldset[disabled] .btn-primary.focus, fieldset[disabled] #commentform .form-submit input.focus[type="submit"], #commentform .form-submit fieldset[disabled] input.focus[type="submit"], fieldset[disabled] .widget.widget_search .focus.search-submit, .widget.widget_search fieldset[disabled] .focus.search-submit, fieldset[disabled] .btn-primary:active, fieldset[disabled] #commentform .form-submit input[type="submit"]:active, #commentform .form-submit fieldset[disabled] input[type="submit"]:active, fieldset[disabled] .widget.widget_search .search-submit:active, .widget.widget_search fieldset[disabled] .search-submit:active, fieldset[disabled] .btn-primary.active, fieldset[disabled] #commentform .form-submit input.active[type="submit"], #commentform .form-submit fieldset[disabled] input.active[type="submit"], fieldset[disabled] .widget.widget_search .active.search-submit, .widget.widget_search fieldset[disabled] .active.search-submit {
   background-color: #337ab7;
   border-color: #2e6da4;
 }
 /* line 40, ../bower_components/bootstrap-sass/assets/stylesheets/bootstrap/mixins/_buttons.scss */
-.btn-primary .badge, .widget.widget_search .search-submit .badge {
+.btn-primary .badge, #commentform .form-submit input[type="submit"] .badge, .widget.widget_search .search-submit .badge {
   color: #337ab7;
   background-color: #fff;
 }
@@ -4676,7 +4799,7 @@ select[multiple].input-lg,
 }
 
 /* line 127, ../bower_components/bootstrap-sass/assets/stylesheets/bootstrap/_buttons.scss */
-.btn-lg, .btn-group-lg > .btn, .widget.widget_search .btn-group-lg > .search-submit {
+.btn-lg, .btn-group-lg > .btn, #commentform .form-submit .btn-group-lg > input[type="submit"], .widget.widget_search .btn-group-lg > .search-submit {
   padding: 10px 16px;
   font-size: 18px;
   line-height: 1.33333;
@@ -4684,7 +4807,7 @@ select[multiple].input-lg,
 }
 
 /* line 131, ../bower_components/bootstrap-sass/assets/stylesheets/bootstrap/_buttons.scss */
-.btn-sm, .btn-group-sm > .btn, .widget.widget_search .btn-group-sm > .search-submit {
+.btn-sm, .btn-group-sm > .btn, #commentform .form-submit .btn-group-sm > input[type="submit"], .widget.widget_search .btn-group-sm > .search-submit {
   padding: 5px 10px;
   font-size: 12px;
   line-height: 1.5;
@@ -4692,7 +4815,7 @@ select[multiple].input-lg,
 }
 
 /* line 135, ../bower_components/bootstrap-sass/assets/stylesheets/bootstrap/_buttons.scss */
-.btn-xs, .btn-group-xs > .btn, .widget.widget_search .btn-group-xs > .search-submit {
+.btn-xs, .btn-group-xs > .btn, #commentform .form-submit .btn-group-xs > input[type="submit"], .widget.widget_search .btn-group-xs > .search-submit {
   padding: 1px 5px;
   font-size: 12px;
   line-height: 1.5;
@@ -4939,31 +5062,40 @@ tbody.collapse.in {
   vertical-align: middle;
 }
 /* line 11, ../bower_components/bootstrap-sass/assets/stylesheets/bootstrap/_button-groups.scss */
-.btn-group > .btn, .widget.widget_search .btn-group > .search-submit,
+.btn-group > .btn, #commentform .form-submit .btn-group > input[type="submit"], .widget.widget_search .btn-group > .search-submit,
 .btn-group-vertical > .btn,
+#commentform .form-submit .btn-group-vertical > input[type="submit"],
 .widget.widget_search .btn-group-vertical > .search-submit {
   position: relative;
   float: left;
 }
 /* line 15, ../bower_components/bootstrap-sass/assets/stylesheets/bootstrap/_button-groups.scss */
-.btn-group > .btn:hover, .widget.widget_search .btn-group > .search-submit:hover, .btn-group > .btn:focus, .widget.widget_search .btn-group > .search-submit:focus, .btn-group > .btn:active, .widget.widget_search .btn-group > .search-submit:active, .btn-group > .btn.active, .widget.widget_search .btn-group > .active.search-submit,
+.btn-group > .btn:hover, #commentform .form-submit .btn-group > input[type="submit"]:hover, .widget.widget_search .btn-group > .search-submit:hover, .btn-group > .btn:focus, #commentform .form-submit .btn-group > input[type="submit"]:focus, .widget.widget_search .btn-group > .search-submit:focus, .btn-group > .btn:active, #commentform .form-submit .btn-group > input[type="submit"]:active, .widget.widget_search .btn-group > .search-submit:active, .btn-group > .btn.active, #commentform .form-submit .btn-group > input.active[type="submit"], .widget.widget_search .btn-group > .active.search-submit,
 .btn-group-vertical > .btn:hover,
+#commentform .form-submit .btn-group-vertical > input[type="submit"]:hover,
 .widget.widget_search .btn-group-vertical > .search-submit:hover,
 .btn-group-vertical > .btn:focus,
+#commentform .form-submit .btn-group-vertical > input[type="submit"]:focus,
 .widget.widget_search .btn-group-vertical > .search-submit:focus,
 .btn-group-vertical > .btn:active,
+#commentform .form-submit .btn-group-vertical > input[type="submit"]:active,
 .widget.widget_search .btn-group-vertical > .search-submit:active,
 .btn-group-vertical > .btn.active,
+#commentform .form-submit .btn-group-vertical > input.active[type="submit"],
 .widget.widget_search .btn-group-vertical > .active.search-submit {
   z-index: 2;
 }
 
 /* line 26, ../bower_components/bootstrap-sass/assets/stylesheets/bootstrap/_button-groups.scss */
-.btn-group .btn + .btn, .btn-group .widget.widget_search .search-submit + .btn, .widget.widget_search .btn-group .search-submit + .btn, .btn-group .widget.widget_search .btn + .search-submit, .widget.widget_search .btn-group .btn + .search-submit, .btn-group .widget.widget_search .search-submit + .search-submit, .widget.widget_search .btn-group .search-submit + .search-submit,
+.btn-group .btn + .btn, .btn-group #commentform .form-submit input[type="submit"] + .btn, #commentform .form-submit .btn-group input[type="submit"] + .btn, .btn-group .widget.widget_search .search-submit + .btn, .widget.widget_search .btn-group .search-submit + .btn, .btn-group #commentform .form-submit .btn + input[type="submit"], #commentform .form-submit .btn-group .btn + input[type="submit"], .btn-group #commentform .form-submit input[type="submit"] + input[type="submit"], #commentform .form-submit .btn-group input[type="submit"] + input[type="submit"], .btn-group .widget.widget_search #commentform .form-submit .search-submit + input[type="submit"], #commentform .form-submit .btn-group .widget.widget_search .search-submit + input[type="submit"], .widget.widget_search .btn-group #commentform .form-submit .search-submit + input[type="submit"], #commentform .form-submit .widget.widget_search .btn-group .search-submit + input[type="submit"], .btn-group .widget.widget_search .btn + .search-submit, .widget.widget_search .btn-group .btn + .search-submit, .btn-group #commentform .form-submit .widget.widget_search input[type="submit"] + .search-submit, .widget.widget_search .btn-group #commentform .form-submit input[type="submit"] + .search-submit, #commentform .form-submit .btn-group .widget.widget_search input[type="submit"] + .search-submit, .widget.widget_search #commentform .form-submit .btn-group input[type="submit"] + .search-submit, .btn-group .widget.widget_search .search-submit + .search-submit, .widget.widget_search .btn-group .search-submit + .search-submit,
 .btn-group .btn + .btn-group,
+.btn-group #commentform .form-submit input[type="submit"] + .btn-group,
+#commentform .form-submit .btn-group input[type="submit"] + .btn-group,
 .btn-group .widget.widget_search .search-submit + .btn-group,
 .widget.widget_search .btn-group .search-submit + .btn-group,
 .btn-group .btn-group + .btn,
+.btn-group #commentform .form-submit .btn-group + input[type="submit"],
+#commentform .form-submit .btn-group .btn-group + input[type="submit"],
 .btn-group .widget.widget_search .btn-group + .search-submit,
 .widget.widget_search .btn-group .btn-group + .search-submit,
 .btn-group .btn-group + .btn-group {
@@ -4989,29 +5121,29 @@ tbody.collapse.in {
   float: left;
 }
 /* line 43, ../bower_components/bootstrap-sass/assets/stylesheets/bootstrap/_button-groups.scss */
-.btn-toolbar > .btn, .widget.widget_search .btn-toolbar > .search-submit,
+.btn-toolbar > .btn, #commentform .form-submit .btn-toolbar > input[type="submit"], .widget.widget_search .btn-toolbar > .search-submit,
 .btn-toolbar > .btn-group,
 .btn-toolbar > .input-group {
   margin-left: 5px;
 }
 
 /* line 50, ../bower_components/bootstrap-sass/assets/stylesheets/bootstrap/_button-groups.scss */
-.btn-group > .btn:not(:first-child):not(:last-child):not(.dropdown-toggle), .widget.widget_search .btn-group > .search-submit:not(:first-child):not(:last-child):not(.dropdown-toggle) {
+.btn-group > .btn:not(:first-child):not(:last-child):not(.dropdown-toggle), #commentform .form-submit .btn-group > input[type="submit"]:not(:first-child):not(:last-child):not(.dropdown-toggle), .widget.widget_search .btn-group > .search-submit:not(:first-child):not(:last-child):not(.dropdown-toggle) {
   border-radius: 0;
 }
 
 /* line 55, ../bower_components/bootstrap-sass/assets/stylesheets/bootstrap/_button-groups.scss */
-.btn-group > .btn:first-child, .widget.widget_search .btn-group > .search-submit:first-child {
+.btn-group > .btn:first-child, #commentform .form-submit .btn-group > input[type="submit"]:first-child, .widget.widget_search .btn-group > .search-submit:first-child {
   margin-left: 0;
 }
 /* line 57, ../bower_components/bootstrap-sass/assets/stylesheets/bootstrap/_button-groups.scss */
-.btn-group > .btn:first-child:not(:last-child):not(.dropdown-toggle), .widget.widget_search .btn-group > .search-submit:first-child:not(:last-child):not(.dropdown-toggle) {
+.btn-group > .btn:first-child:not(:last-child):not(.dropdown-toggle), #commentform .form-submit .btn-group > input[type="submit"]:first-child:not(:last-child):not(.dropdown-toggle), .widget.widget_search .btn-group > .search-submit:first-child:not(:last-child):not(.dropdown-toggle) {
   border-bottom-right-radius: 0;
   border-top-right-radius: 0;
 }
 
 /* line 62, ../bower_components/bootstrap-sass/assets/stylesheets/bootstrap/_button-groups.scss */
-.btn-group > .btn:last-child:not(:first-child), .widget.widget_search .btn-group > .search-submit:last-child:not(:first-child),
+.btn-group > .btn:last-child:not(:first-child), #commentform .form-submit .btn-group > input[type="submit"]:last-child:not(:first-child), .widget.widget_search .btn-group > .search-submit:last-child:not(:first-child),
 .btn-group > .dropdown-toggle:not(:first-child) {
   border-bottom-left-radius: 0;
   border-top-left-radius: 0;
@@ -5023,19 +5155,19 @@ tbody.collapse.in {
 }
 
 /* line 71, ../bower_components/bootstrap-sass/assets/stylesheets/bootstrap/_button-groups.scss */
-.btn-group > .btn-group:not(:first-child):not(:last-child) > .btn, .widget.widget_search .btn-group > .btn-group:not(:first-child):not(:last-child) > .search-submit {
+.btn-group > .btn-group:not(:first-child):not(:last-child) > .btn, #commentform .form-submit .btn-group > .btn-group:not(:first-child):not(:last-child) > input[type="submit"], .widget.widget_search .btn-group > .btn-group:not(:first-child):not(:last-child) > .search-submit {
   border-radius: 0;
 }
 
 /* line 75, ../bower_components/bootstrap-sass/assets/stylesheets/bootstrap/_button-groups.scss */
-.btn-group > .btn-group:first-child:not(:last-child) > .btn:last-child, .widget.widget_search .btn-group > .btn-group:first-child:not(:last-child) > .search-submit:last-child,
+.btn-group > .btn-group:first-child:not(:last-child) > .btn:last-child, #commentform .form-submit .btn-group > .btn-group:first-child:not(:last-child) > input[type="submit"]:last-child, .widget.widget_search .btn-group > .btn-group:first-child:not(:last-child) > .search-submit:last-child,
 .btn-group > .btn-group:first-child:not(:last-child) > .dropdown-toggle {
   border-bottom-right-radius: 0;
   border-top-right-radius: 0;
 }
 
 /* line 80, ../bower_components/bootstrap-sass/assets/stylesheets/bootstrap/_button-groups.scss */
-.btn-group > .btn-group:last-child:not(:first-child) > .btn:first-child, .widget.widget_search .btn-group > .btn-group:last-child:not(:first-child) > .search-submit:first-child {
+.btn-group > .btn-group:last-child:not(:first-child) > .btn:first-child, #commentform .form-submit .btn-group > .btn-group:last-child:not(:first-child) > input[type="submit"]:first-child, .widget.widget_search .btn-group > .btn-group:last-child:not(:first-child) > .search-submit:first-child {
   border-bottom-left-radius: 0;
   border-top-left-radius: 0;
 }
@@ -5047,13 +5179,13 @@ tbody.collapse.in {
 }
 
 /* line 104, ../bower_components/bootstrap-sass/assets/stylesheets/bootstrap/_button-groups.scss */
-.btn-group > .btn + .dropdown-toggle, .widget.widget_search .btn-group > .search-submit + .dropdown-toggle {
+.btn-group > .btn + .dropdown-toggle, #commentform .form-submit .btn-group > input[type="submit"] + .dropdown-toggle, .widget.widget_search .btn-group > .search-submit + .dropdown-toggle {
   padding-left: 8px;
   padding-right: 8px;
 }
 
 /* line 108, ../bower_components/bootstrap-sass/assets/stylesheets/bootstrap/_button-groups.scss */
-.btn-group > .btn-lg + .dropdown-toggle, .btn-group-lg.btn-group > .btn + .dropdown-toggle, .widget.widget_search .btn-group-lg.btn-group > .search-submit + .dropdown-toggle {
+.btn-group > .btn-lg + .dropdown-toggle, .btn-group-lg.btn-group > .btn + .dropdown-toggle, #commentform .form-submit .btn-group-lg.btn-group > input[type="submit"] + .dropdown-toggle, .widget.widget_search .btn-group-lg.btn-group > .search-submit + .dropdown-toggle {
   padding-left: 12px;
   padding-right: 12px;
 }
@@ -5070,25 +5202,26 @@ tbody.collapse.in {
 }
 
 /* line 126, ../bower_components/bootstrap-sass/assets/stylesheets/bootstrap/_button-groups.scss */
-.btn .caret, .widget.widget_search .search-submit .caret {
+.btn .caret, #commentform .form-submit input[type="submit"] .caret, .widget.widget_search .search-submit .caret {
   margin-left: 0;
 }
 
 /* line 130, ../bower_components/bootstrap-sass/assets/stylesheets/bootstrap/_button-groups.scss */
-.btn-lg .caret, .btn-group-lg > .btn .caret, .widget.widget_search .btn-group-lg > .search-submit .caret {
+.btn-lg .caret, .btn-group-lg > .btn .caret, #commentform .form-submit .btn-group-lg > input[type="submit"] .caret, .widget.widget_search .btn-group-lg > .search-submit .caret {
   border-width: 5px 5px 0;
   border-bottom-width: 0;
 }
 
 /* line 135, ../bower_components/bootstrap-sass/assets/stylesheets/bootstrap/_button-groups.scss */
-.dropup .btn-lg .caret, .dropup .btn-group-lg > .btn .caret, .dropup .widget.widget_search .btn-group-lg > .search-submit .caret, .widget.widget_search .dropup .btn-group-lg > .search-submit .caret {
+.dropup .btn-lg .caret, .dropup .btn-group-lg > .btn .caret, .dropup #commentform .form-submit .btn-group-lg > input[type="submit"] .caret, #commentform .form-submit .dropup .btn-group-lg > input[type="submit"] .caret, .dropup .widget.widget_search .btn-group-lg > .search-submit .caret, .widget.widget_search .dropup .btn-group-lg > .search-submit .caret {
   border-width: 0 5px 5px;
 }
 
 /* line 144, ../bower_components/bootstrap-sass/assets/stylesheets/bootstrap/_button-groups.scss */
-.btn-group-vertical > .btn, .widget.widget_search .btn-group-vertical > .search-submit,
+.btn-group-vertical > .btn, #commentform .form-submit .btn-group-vertical > input[type="submit"], .widget.widget_search .btn-group-vertical > .search-submit,
 .btn-group-vertical > .btn-group,
 .btn-group-vertical > .btn-group > .btn,
+#commentform .form-submit .btn-group-vertical > .btn-group > input[type="submit"],
 .widget.widget_search .btn-group-vertical > .btn-group > .search-submit {
   display: block;
   float: none;
@@ -5105,14 +5238,16 @@ tbody.collapse.in {
   clear: both;
 }
 /* line 156, ../bower_components/bootstrap-sass/assets/stylesheets/bootstrap/_button-groups.scss */
-.btn-group-vertical > .btn-group > .btn, .widget.widget_search .btn-group-vertical > .btn-group > .search-submit {
+.btn-group-vertical > .btn-group > .btn, #commentform .form-submit .btn-group-vertical > .btn-group > input[type="submit"], .widget.widget_search .btn-group-vertical > .btn-group > .search-submit {
   float: none;
 }
 /* line 161, ../bower_components/bootstrap-sass/assets/stylesheets/bootstrap/_button-groups.scss */
-.btn-group-vertical > .btn + .btn, .widget.widget_search .btn-group-vertical > .search-submit + .btn, .widget.widget_search .btn-group-vertical > .btn + .search-submit, .widget.widget_search .btn-group-vertical > .search-submit + .search-submit,
+.btn-group-vertical > .btn + .btn, #commentform .form-submit .btn-group-vertical > input[type="submit"] + .btn, .widget.widget_search .btn-group-vertical > .search-submit + .btn, #commentform .form-submit .btn-group-vertical > .btn + input[type="submit"], #commentform .form-submit .btn-group-vertical > input[type="submit"] + input[type="submit"], .widget.widget_search #commentform .form-submit .btn-group-vertical > .search-submit + input[type="submit"], #commentform .form-submit .widget.widget_search .btn-group-vertical > .search-submit + input[type="submit"], .widget.widget_search .btn-group-vertical > .btn + .search-submit, #commentform .form-submit .widget.widget_search .btn-group-vertical > input[type="submit"] + .search-submit, .widget.widget_search #commentform .form-submit .btn-group-vertical > input[type="submit"] + .search-submit, .widget.widget_search .btn-group-vertical > .search-submit + .search-submit,
 .btn-group-vertical > .btn + .btn-group,
+#commentform .form-submit .btn-group-vertical > input[type="submit"] + .btn-group,
 .widget.widget_search .btn-group-vertical > .search-submit + .btn-group,
 .btn-group-vertical > .btn-group + .btn,
+#commentform .form-submit .btn-group-vertical > .btn-group + input[type="submit"],
 .widget.widget_search .btn-group-vertical > .btn-group + .search-submit,
 .btn-group-vertical > .btn-group + .btn-group {
   margin-top: -1px;
@@ -5120,36 +5255,36 @@ tbody.collapse.in {
 }
 
 /* line 171, ../bower_components/bootstrap-sass/assets/stylesheets/bootstrap/_button-groups.scss */
-.btn-group-vertical > .btn:not(:first-child):not(:last-child), .widget.widget_search .btn-group-vertical > .search-submit:not(:first-child):not(:last-child) {
+.btn-group-vertical > .btn:not(:first-child):not(:last-child), #commentform .form-submit .btn-group-vertical > input[type="submit"]:not(:first-child):not(:last-child), .widget.widget_search .btn-group-vertical > .search-submit:not(:first-child):not(:last-child) {
   border-radius: 0;
 }
 /* line 174, ../bower_components/bootstrap-sass/assets/stylesheets/bootstrap/_button-groups.scss */
-.btn-group-vertical > .btn:first-child:not(:last-child), .widget.widget_search .btn-group-vertical > .search-submit:first-child:not(:last-child) {
+.btn-group-vertical > .btn:first-child:not(:last-child), #commentform .form-submit .btn-group-vertical > input[type="submit"]:first-child:not(:last-child), .widget.widget_search .btn-group-vertical > .search-submit:first-child:not(:last-child) {
   border-top-right-radius: 4px;
   border-bottom-right-radius: 0;
   border-bottom-left-radius: 0;
 }
 /* line 178, ../bower_components/bootstrap-sass/assets/stylesheets/bootstrap/_button-groups.scss */
-.btn-group-vertical > .btn:last-child:not(:first-child), .widget.widget_search .btn-group-vertical > .search-submit:last-child:not(:first-child) {
+.btn-group-vertical > .btn:last-child:not(:first-child), #commentform .form-submit .btn-group-vertical > input[type="submit"]:last-child:not(:first-child), .widget.widget_search .btn-group-vertical > .search-submit:last-child:not(:first-child) {
   border-bottom-left-radius: 4px;
   border-top-right-radius: 0;
   border-top-left-radius: 0;
 }
 
 /* line 183, ../bower_components/bootstrap-sass/assets/stylesheets/bootstrap/_button-groups.scss */
-.btn-group-vertical > .btn-group:not(:first-child):not(:last-child) > .btn, .widget.widget_search .btn-group-vertical > .btn-group:not(:first-child):not(:last-child) > .search-submit {
+.btn-group-vertical > .btn-group:not(:first-child):not(:last-child) > .btn, #commentform .form-submit .btn-group-vertical > .btn-group:not(:first-child):not(:last-child) > input[type="submit"], .widget.widget_search .btn-group-vertical > .btn-group:not(:first-child):not(:last-child) > .search-submit {
   border-radius: 0;
 }
 
 /* line 187, ../bower_components/bootstrap-sass/assets/stylesheets/bootstrap/_button-groups.scss */
-.btn-group-vertical > .btn-group:first-child:not(:last-child) > .btn:last-child, .widget.widget_search .btn-group-vertical > .btn-group:first-child:not(:last-child) > .search-submit:last-child,
+.btn-group-vertical > .btn-group:first-child:not(:last-child) > .btn:last-child, #commentform .form-submit .btn-group-vertical > .btn-group:first-child:not(:last-child) > input[type="submit"]:last-child, .widget.widget_search .btn-group-vertical > .btn-group:first-child:not(:last-child) > .search-submit:last-child,
 .btn-group-vertical > .btn-group:first-child:not(:last-child) > .dropdown-toggle {
   border-bottom-right-radius: 0;
   border-bottom-left-radius: 0;
 }
 
 /* line 192, ../bower_components/bootstrap-sass/assets/stylesheets/bootstrap/_button-groups.scss */
-.btn-group-vertical > .btn-group:last-child:not(:first-child) > .btn:first-child, .widget.widget_search .btn-group-vertical > .btn-group:last-child:not(:first-child) > .search-submit:first-child {
+.btn-group-vertical > .btn-group:last-child:not(:first-child) > .btn:first-child, #commentform .form-submit .btn-group-vertical > .btn-group:last-child:not(:first-child) > input[type="submit"]:first-child, .widget.widget_search .btn-group-vertical > .btn-group:last-child:not(:first-child) > .search-submit:first-child {
   border-top-right-radius: 0;
   border-top-left-radius: 0;
 }
@@ -5162,14 +5297,14 @@ tbody.collapse.in {
   border-collapse: separate;
 }
 /* line 205, ../bower_components/bootstrap-sass/assets/stylesheets/bootstrap/_button-groups.scss */
-.btn-group-justified > .btn, .widget.widget_search .btn-group-justified > .search-submit,
+.btn-group-justified > .btn, #commentform .form-submit .btn-group-justified > input[type="submit"], .widget.widget_search .btn-group-justified > .search-submit,
 .btn-group-justified > .btn-group {
   float: none;
   display: table-cell;
   width: 1%;
 }
 /* line 211, ../bower_components/bootstrap-sass/assets/stylesheets/bootstrap/_button-groups.scss */
-.btn-group-justified > .btn-group .btn, .btn-group-justified > .btn-group .widget.widget_search .search-submit, .widget.widget_search .btn-group-justified > .btn-group .search-submit {
+.btn-group-justified > .btn-group .btn, .btn-group-justified > .btn-group #commentform .form-submit input[type="submit"], #commentform .form-submit .btn-group-justified > .btn-group input[type="submit"], .btn-group-justified > .btn-group .widget.widget_search .search-submit, .widget.widget_search .btn-group-justified > .btn-group .search-submit {
   width: 100%;
 }
 /* line 215, ../bower_components/bootstrap-sass/assets/stylesheets/bootstrap/_button-groups.scss */
@@ -5178,12 +5313,15 @@ tbody.collapse.in {
 }
 
 /* line 236, ../bower_components/bootstrap-sass/assets/stylesheets/bootstrap/_button-groups.scss */
-[data-toggle="buttons"] > .btn input[type="radio"], .widget.widget_search [data-toggle="buttons"] > .search-submit input[type="radio"],
+[data-toggle="buttons"] > .btn input[type="radio"], #commentform .form-submit [data-toggle="buttons"] > input[type="submit"] input[type="radio"], .widget.widget_search [data-toggle="buttons"] > .search-submit input[type="radio"],
 [data-toggle="buttons"] > .btn input[type="checkbox"],
+#commentform .form-submit [data-toggle="buttons"] > input[type="submit"] input[type="checkbox"],
 .widget.widget_search [data-toggle="buttons"] > .search-submit input[type="checkbox"],
 [data-toggle="buttons"] > .btn-group > .btn input[type="radio"],
+#commentform .form-submit [data-toggle="buttons"] > .btn-group > input[type="submit"] input[type="radio"],
 .widget.widget_search [data-toggle="buttons"] > .btn-group > .search-submit input[type="radio"],
 [data-toggle="buttons"] > .btn-group > .btn input[type="checkbox"],
+#commentform .form-submit [data-toggle="buttons"] > .btn-group > input[type="submit"] input[type="checkbox"],
 .widget.widget_search [data-toggle="buttons"] > .btn-group > .search-submit input[type="checkbox"] {
   position: absolute;
   clip: rect(0, 0, 0, 0);
@@ -5203,7 +5341,11 @@ tbody.collapse.in {
   padding-right: 0;
 }
 /* line 19, ../bower_components/bootstrap-sass/assets/stylesheets/bootstrap/_input-groups.scss */
-.input-group .form-control, .input-group .widget.widget_search .search-field, .widget.widget_search .input-group .search-field, .input-group .comment-form-comment textarea, .comment-form-comment .input-group textarea {
+.input-group .form-control, .input-group #commentform .comment-form-author > input, #commentform .input-group .comment-form-author > input,
+.input-group #commentform .comment-form-email > input,
+#commentform .input-group .comment-form-email > input,
+.input-group #commentform .comment-form-url > input,
+#commentform .input-group .comment-form-url > input, .input-group #commentform .comment-form-comment > textarea, #commentform .input-group .comment-form-comment > textarea, .input-group .widget.widget_search .search-field, .widget.widget_search .input-group .search-field {
   position: relative;
   z-index: 2;
   float: left;
@@ -5215,20 +5357,32 @@ tbody.collapse.in {
 .input-group-addon,
 .input-group-btn,
 .input-group .form-control,
+.input-group #commentform .comment-form-author > input,
+#commentform .input-group .comment-form-author > input,
+.input-group #commentform .comment-form-email > input,
+#commentform .input-group .comment-form-email > input,
+.input-group #commentform .comment-form-url > input,
+#commentform .input-group .comment-form-url > input,
+.input-group #commentform .comment-form-comment > textarea,
+#commentform .input-group .comment-form-comment > textarea,
 .input-group .widget.widget_search .search-field,
-.widget.widget_search .input-group .search-field,
-.input-group .comment-form-comment textarea,
-.comment-form-comment .input-group textarea {
+.widget.widget_search .input-group .search-field {
   display: table-cell;
 }
 /* line 59, ../bower_components/bootstrap-sass/assets/stylesheets/bootstrap/_input-groups.scss */
 .input-group-addon:not(:first-child):not(:last-child),
 .input-group-btn:not(:first-child):not(:last-child),
 .input-group .form-control:not(:first-child):not(:last-child),
+.input-group #commentform .comment-form-author > input:not(:first-child):not(:last-child),
+#commentform .input-group .comment-form-author > input:not(:first-child):not(:last-child),
+.input-group #commentform .comment-form-email > input:not(:first-child):not(:last-child),
+#commentform .input-group .comment-form-email > input:not(:first-child):not(:last-child),
+.input-group #commentform .comment-form-url > input:not(:first-child):not(:last-child),
+#commentform .input-group .comment-form-url > input:not(:first-child):not(:last-child),
+.input-group #commentform .comment-form-comment > textarea:not(:first-child):not(:last-child),
+#commentform .input-group .comment-form-comment > textarea:not(:first-child):not(:last-child),
 .input-group .widget.widget_search .search-field:not(:first-child):not(:last-child),
-.widget.widget_search .input-group .search-field:not(:first-child):not(:last-child),
-.input-group .comment-form-comment textarea:not(:first-child):not(:last-child),
-.comment-form-comment .input-group textarea:not(:first-child):not(:last-child) {
+.widget.widget_search .input-group .search-field:not(:first-child):not(:last-child) {
   border-radius: 0;
 }
 
@@ -5253,18 +5407,24 @@ tbody.collapse.in {
   border-radius: 4px;
 }
 /* line 85, ../bower_components/bootstrap-sass/assets/stylesheets/bootstrap/_input-groups.scss */
-.input-group-addon.input-sm, .widget.widget_search .input-group-sm > .input-group-addon.search-field,
+.input-group-addon.input-sm, #commentform .comment-form-author.input-group-sm > input.input-group-addon,
+#commentform .comment-form-email.input-group-sm > input.input-group-addon,
+#commentform .comment-form-url.input-group-sm > input.input-group-addon, #commentform .comment-form-comment.input-group-sm > textarea.input-group-addon, .widget.widget_search .input-group-sm > .input-group-addon.search-field,
 .input-group-sm > .input-group-addon,
 .input-group-sm > .input-group-btn > .input-group-addon.btn,
+#commentform .form-submit .input-group-sm > .input-group-btn > input.input-group-addon[type="submit"],
 .widget.widget_search .input-group-sm > .input-group-btn > .input-group-addon.search-submit {
   padding: 5px 10px;
   font-size: 12px;
   border-radius: 3px;
 }
 /* line 90, ../bower_components/bootstrap-sass/assets/stylesheets/bootstrap/_input-groups.scss */
-.input-group-addon.input-lg, .widget.widget_search .input-group-lg > .input-group-addon.search-field,
+.input-group-addon.input-lg, #commentform .comment-form-author.input-group-lg > input.input-group-addon,
+#commentform .comment-form-email.input-group-lg > input.input-group-addon,
+#commentform .comment-form-url.input-group-lg > input.input-group-addon, #commentform .comment-form-comment.input-group-lg > textarea.input-group-addon, .widget.widget_search .input-group-lg > .input-group-addon.search-field,
 .input-group-lg > .input-group-addon,
 .input-group-lg > .input-group-btn > .input-group-addon.btn,
+#commentform .form-submit .input-group-lg > .input-group-btn > input.input-group-addon[type="submit"],
 .widget.widget_search .input-group-lg > .input-group-btn > .input-group-addon.search-submit {
   padding: 10px 16px;
   font-size: 18px;
@@ -5277,16 +5437,24 @@ tbody.collapse.in {
 }
 
 /* line 104, ../bower_components/bootstrap-sass/assets/stylesheets/bootstrap/_input-groups.scss */
-.input-group .form-control:first-child, .input-group .widget.widget_search .search-field:first-child, .widget.widget_search .input-group .search-field:first-child, .input-group .comment-form-comment textarea:first-child, .comment-form-comment .input-group textarea:first-child,
+.input-group .form-control:first-child, .input-group #commentform .comment-form-author > input:first-child, #commentform .input-group .comment-form-author > input:first-child,
+.input-group #commentform .comment-form-email > input:first-child,
+#commentform .input-group .comment-form-email > input:first-child,
+.input-group #commentform .comment-form-url > input:first-child,
+#commentform .input-group .comment-form-url > input:first-child, .input-group #commentform .comment-form-comment > textarea:first-child, #commentform .input-group .comment-form-comment > textarea:first-child, .input-group .widget.widget_search .search-field:first-child, .widget.widget_search .input-group .search-field:first-child,
 .input-group-addon:first-child,
 .input-group-btn:first-child > .btn,
+#commentform .form-submit .input-group-btn:first-child > input[type="submit"],
 .widget.widget_search .input-group-btn:first-child > .search-submit,
 .input-group-btn:first-child > .btn-group > .btn,
+#commentform .form-submit .input-group-btn:first-child > .btn-group > input[type="submit"],
 .widget.widget_search .input-group-btn:first-child > .btn-group > .search-submit,
 .input-group-btn:first-child > .dropdown-toggle,
 .input-group-btn:last-child > .btn:not(:last-child):not(.dropdown-toggle),
+#commentform .form-submit .input-group-btn:last-child > input[type="submit"]:not(:last-child):not(.dropdown-toggle),
 .widget.widget_search .input-group-btn:last-child > .search-submit:not(:last-child):not(.dropdown-toggle),
 .input-group-btn:last-child > .btn-group:not(:last-child) > .btn,
+#commentform .form-submit .input-group-btn:last-child > .btn-group:not(:last-child) > input[type="submit"],
 .widget.widget_search .input-group-btn:last-child > .btn-group:not(:last-child) > .search-submit {
   border-bottom-right-radius: 0;
   border-top-right-radius: 0;
@@ -5298,16 +5466,24 @@ tbody.collapse.in {
 }
 
 /* line 116, ../bower_components/bootstrap-sass/assets/stylesheets/bootstrap/_input-groups.scss */
-.input-group .form-control:last-child, .input-group .widget.widget_search .search-field:last-child, .widget.widget_search .input-group .search-field:last-child, .input-group .comment-form-comment textarea:last-child, .comment-form-comment .input-group textarea:last-child,
+.input-group .form-control:last-child, .input-group #commentform .comment-form-author > input:last-child, #commentform .input-group .comment-form-author > input:last-child,
+.input-group #commentform .comment-form-email > input:last-child,
+#commentform .input-group .comment-form-email > input:last-child,
+.input-group #commentform .comment-form-url > input:last-child,
+#commentform .input-group .comment-form-url > input:last-child, .input-group #commentform .comment-form-comment > textarea:last-child, #commentform .input-group .comment-form-comment > textarea:last-child, .input-group .widget.widget_search .search-field:last-child, .widget.widget_search .input-group .search-field:last-child,
 .input-group-addon:last-child,
 .input-group-btn:last-child > .btn,
+#commentform .form-submit .input-group-btn:last-child > input[type="submit"],
 .widget.widget_search .input-group-btn:last-child > .search-submit,
 .input-group-btn:last-child > .btn-group > .btn,
+#commentform .form-submit .input-group-btn:last-child > .btn-group > input[type="submit"],
 .widget.widget_search .input-group-btn:last-child > .btn-group > .search-submit,
 .input-group-btn:last-child > .dropdown-toggle,
 .input-group-btn:first-child > .btn:not(:first-child),
+#commentform .form-submit .input-group-btn:first-child > input[type="submit"]:not(:first-child),
 .widget.widget_search .input-group-btn:first-child > .search-submit:not(:first-child),
 .input-group-btn:first-child > .btn-group:not(:first-child) > .btn,
+#commentform .form-submit .input-group-btn:first-child > .btn-group:not(:first-child) > input[type="submit"],
 .widget.widget_search .input-group-btn:first-child > .btn-group:not(:first-child) > .search-submit {
   border-bottom-left-radius: 0;
   border-top-left-radius: 0;
@@ -5325,24 +5501,24 @@ tbody.collapse.in {
   white-space: nowrap;
 }
 /* line 140, ../bower_components/bootstrap-sass/assets/stylesheets/bootstrap/_input-groups.scss */
-.input-group-btn > .btn, .widget.widget_search .input-group-btn > .search-submit {
+.input-group-btn > .btn, #commentform .form-submit .input-group-btn > input[type="submit"], .widget.widget_search .input-group-btn > .search-submit {
   position: relative;
 }
 /* line 142, ../bower_components/bootstrap-sass/assets/stylesheets/bootstrap/_input-groups.scss */
-.input-group-btn > .btn + .btn, .widget.widget_search .input-group-btn > .search-submit + .btn, .widget.widget_search .input-group-btn > .btn + .search-submit, .widget.widget_search .input-group-btn > .search-submit + .search-submit {
+.input-group-btn > .btn + .btn, #commentform .form-submit .input-group-btn > input[type="submit"] + .btn, .widget.widget_search .input-group-btn > .search-submit + .btn, #commentform .form-submit .input-group-btn > .btn + input[type="submit"], #commentform .form-submit .input-group-btn > input[type="submit"] + input[type="submit"], .widget.widget_search #commentform .form-submit .input-group-btn > .search-submit + input[type="submit"], #commentform .form-submit .widget.widget_search .input-group-btn > .search-submit + input[type="submit"], .widget.widget_search .input-group-btn > .btn + .search-submit, #commentform .form-submit .widget.widget_search .input-group-btn > input[type="submit"] + .search-submit, .widget.widget_search #commentform .form-submit .input-group-btn > input[type="submit"] + .search-submit, .widget.widget_search .input-group-btn > .search-submit + .search-submit {
   margin-left: -1px;
 }
 /* line 146, ../bower_components/bootstrap-sass/assets/stylesheets/bootstrap/_input-groups.scss */
-.input-group-btn > .btn:hover, .widget.widget_search .input-group-btn > .search-submit:hover, .input-group-btn > .btn:focus, .widget.widget_search .input-group-btn > .search-submit:focus, .input-group-btn > .btn:active, .widget.widget_search .input-group-btn > .search-submit:active {
+.input-group-btn > .btn:hover, #commentform .form-submit .input-group-btn > input[type="submit"]:hover, .widget.widget_search .input-group-btn > .search-submit:hover, .input-group-btn > .btn:focus, #commentform .form-submit .input-group-btn > input[type="submit"]:focus, .widget.widget_search .input-group-btn > .search-submit:focus, .input-group-btn > .btn:active, #commentform .form-submit .input-group-btn > input[type="submit"]:active, .widget.widget_search .input-group-btn > .search-submit:active {
   z-index: 2;
 }
 /* line 155, ../bower_components/bootstrap-sass/assets/stylesheets/bootstrap/_input-groups.scss */
-.input-group-btn:first-child > .btn, .widget.widget_search .input-group-btn:first-child > .search-submit,
+.input-group-btn:first-child > .btn, #commentform .form-submit .input-group-btn:first-child > input[type="submit"], .widget.widget_search .input-group-btn:first-child > .search-submit,
 .input-group-btn:first-child > .btn-group {
   margin-right: -1px;
 }
 /* line 161, ../bower_components/bootstrap-sass/assets/stylesheets/bootstrap/_input-groups.scss */
-.input-group-btn:last-child > .btn, .widget.widget_search .input-group-btn:last-child > .search-submit,
+.input-group-btn:last-child > .btn, #commentform .form-submit .input-group-btn:last-child > input[type="submit"], .widget.widget_search .input-group-btn:last-child > .search-submit,
 .input-group-btn:last-child > .btn-group {
   margin-left: -1px;
 }
@@ -5831,7 +6007,11 @@ tbody.collapse.in {
     vertical-align: middle;
   }
   /* line 448, ../bower_components/bootstrap-sass/assets/stylesheets/bootstrap/_forms.scss */
-  .navbar-form .form-control, .navbar-form .widget.widget_search .search-field, .widget.widget_search .navbar-form .search-field, .navbar-form .comment-form-comment textarea, .comment-form-comment .navbar-form textarea {
+  .navbar-form .form-control, .navbar-form #commentform .comment-form-author > input, #commentform .navbar-form .comment-form-author > input,
+  .navbar-form #commentform .comment-form-email > input,
+  #commentform .navbar-form .comment-form-email > input,
+  .navbar-form #commentform .comment-form-url > input,
+  #commentform .navbar-form .comment-form-url > input, .navbar-form #commentform .comment-form-comment > textarea, #commentform .navbar-form .comment-form-comment > textarea, .navbar-form .widget.widget_search .search-field, .widget.widget_search .navbar-form .search-field {
     display: inline-block;
     width: auto;
     vertical-align: middle;
@@ -5849,14 +6029,24 @@ tbody.collapse.in {
   .navbar-form .input-group .input-group-addon,
   .navbar-form .input-group .input-group-btn,
   .navbar-form .input-group .form-control,
+  .navbar-form .input-group #commentform .comment-form-author > input,
+  #commentform .navbar-form .input-group .comment-form-author > input,
+  .navbar-form .input-group #commentform .comment-form-email > input,
+  #commentform .navbar-form .input-group .comment-form-email > input,
+  .navbar-form .input-group #commentform .comment-form-url > input,
+  #commentform .navbar-form .input-group .comment-form-url > input,
+  .navbar-form .input-group #commentform .comment-form-comment > textarea,
+  #commentform .navbar-form .input-group .comment-form-comment > textarea,
   .navbar-form .input-group .widget.widget_search .search-field,
-  .widget.widget_search .navbar-form .input-group .search-field,
-  .navbar-form .input-group .comment-form-comment textarea,
-  .comment-form-comment .navbar-form .input-group textarea {
+  .widget.widget_search .navbar-form .input-group .search-field {
     width: auto;
   }
   /* line 471, ../bower_components/bootstrap-sass/assets/stylesheets/bootstrap/_forms.scss */
-  .navbar-form .input-group > .form-control, .navbar-form .widget.widget_search .input-group > .search-field, .widget.widget_search .navbar-form .input-group > .search-field, .navbar-form .comment-form-comment .input-group > textarea, .comment-form-comment .navbar-form .input-group > textarea {
+  .navbar-form .input-group > .form-control, .navbar-form #commentform .comment-form-author.input-group > input, #commentform .navbar-form .comment-form-author.input-group > input,
+  .navbar-form #commentform .comment-form-email.input-group > input,
+  #commentform .navbar-form .comment-form-email.input-group > input,
+  .navbar-form #commentform .comment-form-url.input-group > input,
+  #commentform .navbar-form .comment-form-url.input-group > input, .navbar-form #commentform .comment-form-comment.input-group > textarea, #commentform .navbar-form .comment-form-comment.input-group > textarea, .navbar-form .widget.widget_search .input-group > .search-field, .widget.widget_search .navbar-form .input-group > .search-field {
     width: 100%;
   }
   /* line 475, ../bower_components/bootstrap-sass/assets/stylesheets/bootstrap/_forms.scss */
@@ -5934,12 +6124,12 @@ tbody.collapse.in {
   margin-bottom: 8px;
 }
 /* line 346, ../bower_components/bootstrap-sass/assets/stylesheets/bootstrap/_navbar.scss */
-.navbar-btn.btn-sm, .btn-group-sm > .navbar-btn.btn, .widget.widget_search .btn-group-sm > .navbar-btn.search-submit {
+.navbar-btn.btn-sm, .btn-group-sm > .navbar-btn.btn, #commentform .form-submit .btn-group-sm > input.navbar-btn[type="submit"], .widget.widget_search .btn-group-sm > .navbar-btn.search-submit {
   margin-top: 10px;
   margin-bottom: 10px;
 }
 /* line 349, ../bower_components/bootstrap-sass/assets/stylesheets/bootstrap/_navbar.scss */
-.navbar-btn.btn-xs, .btn-group-xs > .navbar-btn.btn, .widget.widget_search .btn-group-xs > .navbar-btn.search-submit {
+.navbar-btn.btn-xs, .btn-group-xs > .navbar-btn.btn, #commentform .form-submit .btn-group-xs > input.navbar-btn[type="submit"], .widget.widget_search .btn-group-xs > .navbar-btn.search-submit {
   margin-top: 14px;
   margin-bottom: 14px;
 }
@@ -6387,7 +6577,7 @@ tbody.collapse.in {
   display: none;
 }
 /* line 25, ../bower_components/bootstrap-sass/assets/stylesheets/bootstrap/_labels.scss */
-.btn .label, .widget.widget_search .search-submit .label {
+.btn .label, #commentform .form-submit input[type="submit"] .label, .widget.widget_search .search-submit .label {
   position: relative;
   top: -1px;
 }
@@ -6473,12 +6663,12 @@ a.label:hover, a.label:focus {
   display: none;
 }
 /* line 27, ../bower_components/bootstrap-sass/assets/stylesheets/bootstrap/_badges.scss */
-.btn .badge, .widget.widget_search .search-submit .badge {
+.btn .badge, #commentform .form-submit input[type="submit"] .badge, .widget.widget_search .search-submit .badge {
   position: relative;
   top: -1px;
 }
 /* line 32, ../bower_components/bootstrap-sass/assets/stylesheets/bootstrap/_badges.scss */
-.btn-xs .badge, .btn-group-xs > .btn .badge, .widget.widget_search .btn-group-xs > .search-submit .badge, .btn-group-xs > .btn .badge, .widget.widget_search .btn-group-xs > .search-submit .badge {
+.btn-xs .badge, .btn-group-xs > .btn .badge, #commentform .form-submit .btn-group-xs > input[type="submit"] .badge, .widget.widget_search .btn-group-xs > .search-submit .badge, .btn-group-xs > .btn .badge, #commentform .form-submit .btn-group-xs > input[type="submit"] .badge, .widget.widget_search .btn-group-xs > .search-submit .badge {
   top: 0;
   padding: 1px 5px;
 }
@@ -7703,12 +7893,12 @@ button.close {
   clear: both;
 }
 /* line 110, ../bower_components/bootstrap-sass/assets/stylesheets/bootstrap/_modals.scss */
-.modal-footer .btn + .btn, .modal-footer .widget.widget_search .search-submit + .btn, .widget.widget_search .modal-footer .search-submit + .btn, .modal-footer .widget.widget_search .btn + .search-submit, .widget.widget_search .modal-footer .btn + .search-submit, .modal-footer .widget.widget_search .search-submit + .search-submit, .widget.widget_search .modal-footer .search-submit + .search-submit {
+.modal-footer .btn + .btn, .modal-footer #commentform .form-submit input[type="submit"] + .btn, #commentform .form-submit .modal-footer input[type="submit"] + .btn, .modal-footer .widget.widget_search .search-submit + .btn, .widget.widget_search .modal-footer .search-submit + .btn, .modal-footer #commentform .form-submit .btn + input[type="submit"], #commentform .form-submit .modal-footer .btn + input[type="submit"], .modal-footer #commentform .form-submit input[type="submit"] + input[type="submit"], #commentform .form-submit .modal-footer input[type="submit"] + input[type="submit"], .modal-footer .widget.widget_search #commentform .form-submit .search-submit + input[type="submit"], #commentform .form-submit .modal-footer .widget.widget_search .search-submit + input[type="submit"], .widget.widget_search .modal-footer #commentform .form-submit .search-submit + input[type="submit"], #commentform .form-submit .widget.widget_search .modal-footer .search-submit + input[type="submit"], .modal-footer .widget.widget_search .btn + .search-submit, .widget.widget_search .modal-footer .btn + .search-submit, .modal-footer #commentform .form-submit .widget.widget_search input[type="submit"] + .search-submit, .widget.widget_search .modal-footer #commentform .form-submit input[type="submit"] + .search-submit, #commentform .form-submit .modal-footer .widget.widget_search input[type="submit"] + .search-submit, .widget.widget_search #commentform .form-submit .modal-footer input[type="submit"] + .search-submit, .modal-footer .widget.widget_search .search-submit + .search-submit, .widget.widget_search .modal-footer .search-submit + .search-submit {
   margin-left: 5px;
   margin-bottom: 0;
 }
 /* line 115, ../bower_components/bootstrap-sass/assets/stylesheets/bootstrap/_modals.scss */
-.modal-footer .btn-group .btn + .btn, .modal-footer .btn-group .widget.widget_search .search-submit + .btn, .widget.widget_search .modal-footer .btn-group .search-submit + .btn, .modal-footer .btn-group .widget.widget_search .btn + .search-submit, .widget.widget_search .modal-footer .btn-group .btn + .search-submit, .modal-footer .btn-group .widget.widget_search .search-submit + .search-submit, .widget.widget_search .modal-footer .btn-group .search-submit + .search-submit {
+.modal-footer .btn-group .btn + .btn, .modal-footer .btn-group #commentform .form-submit input[type="submit"] + .btn, #commentform .form-submit .modal-footer .btn-group input[type="submit"] + .btn, .modal-footer .btn-group .widget.widget_search .search-submit + .btn, .widget.widget_search .modal-footer .btn-group .search-submit + .btn, .modal-footer .btn-group #commentform .form-submit .btn + input[type="submit"], #commentform .form-submit .modal-footer .btn-group .btn + input[type="submit"], .modal-footer .btn-group #commentform .form-submit input[type="submit"] + input[type="submit"], #commentform .form-submit .modal-footer .btn-group input[type="submit"] + input[type="submit"], .modal-footer .btn-group .widget.widget_search #commentform .form-submit .search-submit + input[type="submit"], #commentform .form-submit .modal-footer .btn-group .widget.widget_search .search-submit + input[type="submit"], .widget.widget_search .modal-footer .btn-group #commentform .form-submit .search-submit + input[type="submit"], #commentform .form-submit .widget.widget_search .modal-footer .btn-group .search-submit + input[type="submit"], .modal-footer .btn-group .widget.widget_search .btn + .search-submit, .widget.widget_search .modal-footer .btn-group .btn + .search-submit, .modal-footer .btn-group #commentform .form-submit .widget.widget_search input[type="submit"] + .search-submit, .widget.widget_search .modal-footer .btn-group #commentform .form-submit input[type="submit"] + .search-submit, #commentform .form-submit .modal-footer .btn-group .widget.widget_search input[type="submit"] + .search-submit, .widget.widget_search #commentform .form-submit .modal-footer .btn-group input[type="submit"] + .search-submit, .modal-footer .btn-group .widget.widget_search .search-submit + .search-submit, .widget.widget_search .modal-footer .btn-group .search-submit + .search-submit {
   margin-left: -1px;
 }
 /* line 119, ../bower_components/bootstrap-sass/assets/stylesheets/bootstrap/_modals.scss */
@@ -8243,7 +8433,7 @@ button.close {
   text-shadow: 0 1px 2px rgba(0, 0, 0, 0.6);
 }
 /* line 228, ../bower_components/bootstrap-sass/assets/stylesheets/bootstrap/_carousel.scss */
-.carousel-caption .btn, .carousel-caption .widget.widget_search .search-submit, .widget.widget_search .carousel-caption .search-submit {
+.carousel-caption .btn, .carousel-caption #commentform .form-submit input[type="submit"], #commentform .form-submit .carousel-caption input[type="submit"], .carousel-caption .widget.widget_search .search-submit, .widget.widget_search .carousel-caption .search-submit {
   text-shadow: none;
 }
 
@@ -11536,12 +11726,31 @@ button.close {
   content: "";
 }
 
-/* line 14, ../scss/global.scss */
-.widget.widget_search span {
-  display: none;
+/* line 3, ../scss/_sticky-footer.scss */
+#page {
+  display: flex;
+  min-height: 100vh;
+  -webkit-flex-direction: column;
+  flex-direction: column;
+}
+/* line 7, ../scss/_sticky-footer.scss */
+#page #content {
+  -webkit-flex: 1;
+  flex: 1;
 }
 
-/* line 28, ../scss/global.scss */
-.comment-form-comment label[for="comment"] {
+/* line 5, ../scss/_comment-form.scss */
+#commentform .comment-form-author > label,
+#commentform .comment-form-email > label,
+#commentform .comment-form-url > label {
   display: block;
+}
+/* line 13, ../scss/_comment-form.scss */
+#commentform .comment-form-comment > label {
+  display: block;
+}
+
+/* line 16, ../scss/global.scss */
+.widget.widget_search span {
+  display: none;
 }

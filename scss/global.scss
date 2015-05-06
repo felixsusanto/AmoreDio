@@ -1,5 +1,7 @@
 @import 'bootstrap'; 
 @import 'font-awesome';
+@import 'sticky-footer';
+@import 'comment-form';
 
 
 .widget-title{
@@ -24,11 +26,3 @@
   }
 }
 
-.comment-form-comment{
-  label[for="comment"]{
-    display:block;
-  }
-  textarea{
-    @extend .form-control;
-  }
-}

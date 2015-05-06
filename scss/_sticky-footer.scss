@@ -1,0 +1,11 @@
+@import "compass";
+
+#page {
+  display: flex;
+  min-height: 100vh;
+  @include flex-direction(column);
+  #content {
+    @include flex(1);
+  }
+}
+
