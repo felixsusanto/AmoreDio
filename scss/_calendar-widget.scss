@@ -1,0 +1,46 @@
+@import "compass";
+
+.ko-calendar-widget-events{
+  padding:10px;
+  background:#fff;
+  margin-bottom: 20px;
+  @include border-radius(4px);
+  border:1px solid $stroke;
+  .ko-calendar-event-list + .ko-calendar-date{
+    padding-top:8px;
+    position: relative;
+    &:before{
+      content:"";
+      height:1px;
+      background:$stroke;
+      width:calc(100% + 20px);
+      position:absolute;
+      top:0;
+      left:0;
+      margin-left:-10px;
+    }
+  }
+  .ko-calendar-entry-title:before,
+  .ko-calendar-entry-date-text:before,
+  .ko-calendar-entry-location-text:before{
+    font-family: "FontAwesome";
+    display:inline-block;
+    @extend .fa-fw;
+  }
+  .ko-calendar-entry-date-text:before{
+    content:"\f073";
+  }
+  .ko-calendar-entry-location-text:before{
+    content:"\f041";
+  }
+  .ko-calendar-date{
+    color:$alizarin;
+  }
+  .ko-calendar-entry-title:before{
+    content:"\f13a ";
+  }
+  .ko-calendar-entry-title + div{
+    margin-top:6px;
+    border-top:1px solid $stroke;
+  }
+}

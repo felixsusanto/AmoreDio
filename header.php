@@ -31,7 +31,7 @@
       <button class="menu-toggle" aria-controls="primary-menu" aria-expanded="false"><?php #esc_html_e( 'Primary Menu', 'amoredio' ); ?></button>
       <?php #wp_nav_menu( array( 'theme_location' => 'primary', 'menu_id' => 'primary-menu' ) ); ?>
     </nav> --><!-- #site-navigation -->
-    <nav class="navbar navbar-default">
+    <nav class="navbar navbar-inverse">
       <div class="container">
         <!-- Brand and toggle get grouped for better mobile display -->
         <div class="navbar-header">

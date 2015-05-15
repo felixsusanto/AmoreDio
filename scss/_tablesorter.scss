@@ -1,0 +1,30 @@
+/*------------ TABLESORTER ------------*/
+.tablesorter-headerRow{
+  .tablesorter-header-inner{
+    cursor:pointer;
+  }
+  .tablesorter-headerAsc{
+    .tablesorter-header-inner{
+      &:before{
+        content:"\f0dd \00a0 ";
+        font-family: 'FontAwesome';
+      }
+    }
+  }
+  .tablesorter-headerDesc{
+    .tablesorter-header-inner{
+      &:before{
+        content:"\f0de \00a0 ";
+        font-family: 'FontAwesome';
+      }
+    }
+  }
+  .tablesorter-headerUnSorted{
+    .tablesorter-header-inner{
+      &:before{
+        content:"\f0dc \00a0 ";
+        font-family: 'FontAwesome';
+      }
+    }
+  }
+}

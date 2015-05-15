@@ -23,6 +23,8 @@
     "bootstrap-sass": "~3.3.4"
   },
   "devDependencies": {
-    "fontawesome": "~4.3.0"
+    "fontawesome": "~4.3.0",
+    "jQuery-Chord-Transposer": "jessegavin/jQuery-Chord-Transposer",
+    "owl.carousel": "smashingboxes/OwlCarousel2"
   }
 }

@@ -8,13 +8,13 @@
 get_header(); ?>
 
   <section id="primary" class="content-area">
-    <main id="main" class="site-main container" role="main">
+    <main id="main" class="site-main container search-result" role="main">
     <div class="row">
       <div class="col-sm-8">
         <?php if ( have_posts() ) : ?>
 
           <header class="page-header">
-            <h1 class="page-title"><?php printf( esc_html__( 'Search Results for: %s', 'amoredio' ), '<span>' . get_search_query() . '</span>' ); ?></h1>
+            <h3 class="page-title"><?php printf( esc_html__( 'Search Results for: %s', 'amoredio' ), '<span class="text-primary">"' . get_search_query() . '"</span>' ); ?></h3>
           </header><!-- .page-header -->
 
           <?php /* Start the Loop */ ?>
@@ -40,7 +40,7 @@ get_header(); ?>
         <?php endif; ?>
       </div>
       <!-- /.col-sm-8 -->
-      <div class="com-sm-4">
+      <div class="col-sm-4">
         <?php get_sidebar(); ?>
       </div>
       <!-- /.com-sm-4 -->

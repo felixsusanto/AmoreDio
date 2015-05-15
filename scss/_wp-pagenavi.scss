@@ -1,0 +1,29 @@
+/*
+Default style for WP-PageNavi plugin
+
+http://wordpress.org/extend/plugins/wp-pagenavi/
+*/
+
+.wp-pagenavi {
+  clear: both;
+  margin:15px 0;
+  a, span {
+    @extend .btn;
+    @extend .btn-default;
+  }
+  span.current {
+    @extend .active;
+  }
+  span.current {
+    font-weight: bold;
+  }
+  span.pages{
+    //style here
+    background:#fff;
+    &:hover, &:focus, &:active{
+      background:#fff;
+      @include box-shadow(none);
+      cursor:auto;
+    }
+  }
+}

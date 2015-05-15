@@ -1,11 +1,62 @@
-@import 'bootstrap'; 
-@import 'font-awesome';
-@import 'sticky-footer';
-@import 'comment-form';
+@import "custom-variables"; 
+@import "bootstrap"; 
+@import "font-awesome";
+@import "sticky-footer";
+@import "comment-form";
+@import "tablesorter";
+@import "custom-other";
+@import "calendar-widget";
+@import "chord-transposer";
+@import "wp-pagenavi"; 
 
+.widget_text{
+  @extend .well;
+}
+
+hr {
+    display: block;
+    height: 1px;
+    border: 0;
+    border-top: 1px solid #ccc;
+    margin: 1em 0;
+    padding: 0;
+}
+
+a:hover, a:focus{
+  text-decoration: none;
+}
+
+.search-result{
+  .type-songbook{
+    .entry-title>a:after{
+      content:" - Songbook";
+      font-size:0.8em;
+    }
+  }
+}
+
+nav.navbar{
+  margin-bottom:0;
+}
+
+.widget-area{
+  margin-top:20px;
+}
+
+#breadcrumbs{
+  @extend .well;
+  @extend .well-sm;
+  padding-left:20px;
+  padding-right:20px;
+}
 
 .widget-title{
   @extend .h3;
+  text-align: center;
+}
+
+time.updated:before{
+  content: " | "; 
 }
 
 .widget{
@@ -26,3 +77,34 @@
   }
 }
 
+.site-footer{
+  @extend .well;
+  margin-bottom:0;
+}
+
+.post-navigation{
+  >h2{
+    @extend .h3;
+  }
+  .nav-links{
+    @extend .clearfix;
+    .nav-previous, .nav-next{
+      display:inline-block;
+      @extend .btn;
+      @extend .btn-link;
+    }
+    .nav-previous{
+      >a:before{
+        content: '\f060 \0020';
+        font-family: 'FontAwesome';
+      }
+    }
+    .nav-next{
+      float:right;
+      >a:after{
+        content:'\0020 \f061';
+        font-family: 'FontAwesome';
+      }
+    }
+  }
+}

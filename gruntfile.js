@@ -42,7 +42,9 @@ module.exports = function(grunt) {
       },
       dist: {
         src: ['js/lib/jquery.min.js',
-              'js/lib/bootstrap.min.js'],
+              'js/lib/bootstrap.min.js',
+              'js/lib/jquery.transposer.js',
+              'js/lib/owl.carousel.min.js'],
         dest: 'js/lib.js',
       },
     },

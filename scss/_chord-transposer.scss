@@ -1,0 +1,12 @@
+.transpose-keys{
+  >a{
+    @extend .btn;
+    @extend .btn-default;
+  }
+  >a.selected{
+    @extend .btn-primary;
+  }
+}
+pre span.c{
+  @extend .text-primary;
+}

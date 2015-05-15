@@ -14,6 +14,58 @@ if (in_array($_SERVER['REMOTE_ADDR'], array('127.0.0.1', '::1'))) {
 /*BOOTSTRAP MENU WALKER*/
 require_once('wp_bootstrap_navwalker.php');
 
+
+/*CUSTOM SHORTCODE*/
+function permalink_thingy($atts) {
+  extract(shortcode_atts(array(
+    'id' => 1,
+    'class'=>"",
+    'text' => ""  // default value if none supplied
+    ), $atts));
+    
+    if ($text) {
+        $url = get_permalink($id);
+        return "<a class='$class' href='$url'>$text</a>";
+    } else {
+     return get_permalink($id);
+  }
+}
+add_shortcode('permalink', 'permalink_thingy');
+
+add_filter('widget_text', 'do_shortcode');
+
+
+
+/**
+ * Conditionally Override Yoast SEO Breadcrumb Trail
+ * http://plugins.svn.wordpress.org/wordpress-seo/trunk/frontend/class-breadcrumbs.php
+ * -----------------------------------------------------------------------------------
+ */
+
+add_filter( 'wpseo_breadcrumb_links', 'wpse_100012_override_yoast_breadcrumb_trail' );
+
+function wpse_100012_override_yoast_breadcrumb_trail( $links ) {
+    global $post;
+
+    if ( is_home() || is_singular( 'songbook' ) || is_archive() ) {
+        $breadcrumb[] = array(
+            'url' => get_permalink( get_page_by_title( 'Song Book' ) ),
+            'text' => 'Song Book',
+        );
+
+        array_splice( $links, 1, -2, $breadcrumb );
+    } elseif( is_singular( 'cg-reading' ) ){
+    		$breadcrumb[] = array(
+    		    'url' => get_permalink( get_page_by_title( 'Cell Group Readings' ) ),
+    		    'text' => 'CG Readings',
+    		);
+
+    		array_splice( $links, 1, -2, $breadcrumb );
+    }
+
+    return $links;
+}
+
 /**
  * Set the content width based on the theme's design and stylesheet.
  */
@@ -60,6 +112,7 @@ function amoredio_setup() {
 	// This theme uses wp_nav_menu() in one location.
 	register_nav_menus( array(
 		'primary' => esc_html__( 'Primary Menu', 'amoredio' ),
+    'secondary' => esc_html__('Secondary Menu', 'amoredio'),
 	) );
 
 	/*
@@ -112,11 +165,18 @@ function amoredio_scripts() {
 	//wp_enqueue_style( 'amoredio-style', get_stylesheet_uri() );
 	wp_enqueue_style( 'amoredio-style-global', get_template_directory_uri() . '/css/global.css' );
 
+  wp_enqueue_style( 'amoredio-style-frontpage', get_template_directory_uri() . '/css/front-page.css' );
+
+	wp_enqueue_style( 'amoredio-style-transposer', get_template_directory_uri() . '/css/jquery.transposer.css' );
+
 	wp_enqueue_script( 'amoredio-navigation', get_template_directory_uri() . '/js/navigation.js', array(), '20120206', true );
 
 	wp_enqueue_script( 'amoredio-skip-link-focus-fix', get_template_directory_uri() . '/js/skip-link-focus-fix.js', array(), '20130115', true );
 
 	wp_enqueue_script( 'amoredio-bootstrap', get_template_directory_uri() . '/js/lib.js');
+
+	wp_enqueue_script( 'amoredio-app', get_template_directory_uri() . '/js/app.js');
+
 
 
 	if ( is_singular() && comments_open() && get_option( 'thread_comments' ) ) {
