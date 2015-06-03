@@ -64,7 +64,7 @@ get_header(); ?>
             <?php endwhile; endif; wp_reset_query(); ?>  
           </div><!-- /.upcoming-event -->
           <div class="previous-event">
-            <h2 class="text-center text-red"><i class="fa fa-bullhorn"></i> Previous Event</h2>
+            <h2 class="text-center text-red"><i class="fa fa-bullhorn"></i> Previous Event Test</h2>
             <?php
               // First, initialize how many posts to render per page
               $display_count = 1;

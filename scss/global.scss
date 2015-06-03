@@ -8,6 +8,8 @@
 @import "calendar-widget";
 @import "chord-transposer";
 @import "wp-pagenavi"; 
+@import "carousel-override";
+@import "gallery";
 
 .widget_text{
   @extend .well;
@@ -37,6 +39,9 @@ a:hover, a:focus{
 
 nav.navbar{
   margin-bottom:0;
+  button[type="button"]{
+    color:#fff;
+  }
 }
 
 .widget-area{

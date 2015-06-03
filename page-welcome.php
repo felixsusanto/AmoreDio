@@ -10,10 +10,10 @@ get_header(); ?>
 
 
   <div class="carousel">
-    <div class="logo hidden-xs">
+    <div class="logo">
       <img src="<?php echo get_template_directory_uri();?>/assets/img/logo-01.png" alt="logo of Amore Dio">
     </div>
-    <div id="owl-carousel" class="hidden-xs">
+    <div id="owl-carousel" class="">
     <?php
       $args = array('post_type'=>'carousel', 
                     'posts_per_page'=> -1, 
@@ -31,7 +31,7 @@ get_header(); ?>
     <?php endwhile; ?>
     <?php endif; wp_reset_query(); ?>
     </div><!-- /.loop -->
-    <div class="tooth hidden-xs"></div>
+    <div class="tooth"></div>
   </div><!-- /.carousel -->
 
   <div id="primary" class="content-area">

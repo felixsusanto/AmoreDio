@@ -164,7 +164,7 @@ add_action( 'widgets_init', 'amoredio_widgets_init' );
 function amoredio_scripts() {
 	//wp_enqueue_style( 'amoredio-style', get_stylesheet_uri() );
 	wp_enqueue_style( 'amoredio-style-global', get_template_directory_uri() . '/css/global.css' );
-
+  
   wp_enqueue_style( 'amoredio-style-frontpage', get_template_directory_uri() . '/css/front-page.css' );
 
 	wp_enqueue_style( 'amoredio-style-transposer', get_template_directory_uri() . '/css/jquery.transposer.css' );

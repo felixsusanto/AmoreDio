@@ -1,0 +1,86 @@
+//Flash of Unstyled Content Fix
+//F.O.U.C Fix!
+#owl-carousel{
+  >div + div {
+    display:none;
+  }
+}
+
+//Carousel Styles
+
+.carousel{
+  position:relative;
+  .logo{
+    top:30px;
+    position:absolute;
+    width:100%;
+    text-align: center;
+    z-index:100;
+    margin-bottom:-336px;
+    img{
+      width: 300px;
+      height:auto;
+    }
+  }
+  .carousel--height{
+    position:relative;
+    height:600px;
+    background-repeat:no-repeat;
+    background-position: center center;
+    background-size: cover;
+    blockquote{
+      position:absolute;
+      bottom:0;
+      width:100%;
+      border:0;
+      margin-bottom: 0;
+      background:rgba(0,0,0,0.5);
+
+      p{
+        &:before, &:after{
+          font-family: 'FontAwesome';
+          font-size:1.3em;
+        }
+        &:before{
+          content:"\f10d";
+        }
+        &:after{
+          content:"\f10e";
+        }
+        margin:0 auto;
+        text-align: center;
+        color:#fff;
+        max-width:800px;
+      }
+      footer{
+        margin:0 auto;
+        max-width: 800px;
+        text-align: center;
+        color:$emerald;
+        padding-bottom:10px;
+      }
+    }
+  }
+  .tooth{
+    display:block;
+    position:absolute;
+    width: 100%;
+    bottom:0;
+    z-index:10;
+    height:6px;
+    background:url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAoAAAAGCAYAAAD68A/GAAAANElEQVQIW2NkwAL+AwEjECBLoXBAEiBFMAXIilEUIitCVwxXiE0RsmKwQnyK4IqJUQRSDABKPxf/NTBsIgAAAABJRU5ErkJggg==) repeat-x;
+  }
+  @media(max-width:$screen-xs-max){
+    .carousel--height{
+      display:none;
+    }
+    height:220px;
+    background:url('../assets/img/bg_green.png');
+    .logo{
+      img{
+        width: 172px;
+        height:auto;
+      }
+    }
+  }
+}

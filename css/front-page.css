@@ -306,3 +306,8 @@
 .owl-theme .owl-dots .owl-dot.active span, .owl-theme .owl-dots .owl-dot:hover span {
   background: #869791;
 }
+
+/* line 4, ../scss/front-page.scss */
+.jumbotron {
+  margin-top: 20px;
+}
