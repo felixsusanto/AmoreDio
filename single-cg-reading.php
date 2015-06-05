@@ -14,7 +14,6 @@ get_header(); ?>
     }
     include "inc/partial-header-img.php"; 
   ?>
-  <br>
   <div id="primary" class="content-area">
     <main id="main" class="site-main container" role="main">
     <div class="row">

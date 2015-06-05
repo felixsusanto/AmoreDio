@@ -25,3 +25,33 @@
   }
 }
 
+.comment-list{
+  >li{
+    @extend .well;
+
+    >.children:first-of-type{
+      margin-top:10px;
+      border-top:1px dotted #ddd;
+    }
+
+    li{
+      padding-top:10px;
+      padding-bottom:10px;
+    }
+  }
+  ul{
+    list-style:none;
+    border-left:1px solid $brand-success;
+  }
+  .reply{
+    .comment-reply-link{
+      @extend .btn;
+      @extend .btn-success;
+      @extend .btn-sm;
+      &:before{
+        content:"\f112 \0020";
+        font-family: "FontAwesome";
+      }
+    }
+  }
+}

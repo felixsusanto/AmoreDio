@@ -20,12 +20,13 @@ function permalink_thingy($atts) {
   extract(shortcode_atts(array(
     'id' => 1,
     'class'=>"",
-    'text' => ""  // default value if none supplied
+    'text' => "",  // default value if none supplied
+    'hash' => ""
     ), $atts));
     
     if ($text) {
         $url = get_permalink($id);
-        return "<a class='$class' href='$url'>$text</a>";
+        return "<a class='$class' href='$url$hash'>$text</a>";
     } else {
      return get_permalink($id);
   }
@@ -47,7 +48,7 @@ add_filter( 'wpseo_breadcrumb_links', 'wpse_100012_override_yoast_breadcrumb_tra
 function wpse_100012_override_yoast_breadcrumb_trail( $links ) {
     global $post;
 
-    if ( is_home() || is_singular( 'songbook' ) || is_archive() ) {
+    if ( is_singular( 'songbook' ) ) {
         $breadcrumb[] = array(
             'url' => get_permalink( get_page_by_title( 'Song Book' ) ),
             'text' => 'Song Book',
@@ -55,13 +56,13 @@ function wpse_100012_override_yoast_breadcrumb_trail( $links ) {
 
         array_splice( $links, 1, -2, $breadcrumb );
     } elseif( is_singular( 'cg-reading' ) ){
-    		$breadcrumb[] = array(
-    		    'url' => get_permalink( get_page_by_title( 'Cell Group Readings' ) ),
-    		    'text' => 'CG Readings',
-    		);
+        $breadcrumb[] = array(
+            'url' => get_permalink( get_page_by_title( 'Cell Group Readings' ) ),
+            'text' => 'CG Readings',
+        );
 
-    		array_splice( $links, 1, -2, $breadcrumb );
-    }
+        array_splice( $links, 1, -2, $breadcrumb );
+    } 
 
     return $links;
 }
@@ -70,7 +71,7 @@ function wpse_100012_override_yoast_breadcrumb_trail( $links ) {
  * Set the content width based on the theme's design and stylesheet.
  */
 if ( ! isset( $content_width ) ) {
-	$content_width = 640; /* pixels */
+  $content_width = 640; /* pixels */
 }
 
 if ( ! function_exists( 'amoredio_setup' ) ) :
@@ -83,59 +84,59 @@ if ( ! function_exists( 'amoredio_setup' ) ) :
  */
 function amoredio_setup() {
 
-	/*
-	 * Make theme available for translation.
-	 * Translations can be filed in the /languages/ directory.
-	 * If you're building a theme based on amoredio, use a find and replace
-	 * to change 'amoredio' to the name of your theme in all the template files
-	 */
-	load_theme_textdomain( 'amoredio', get_template_directory() . '/languages' );
+  /*
+   * Make theme available for translation.
+   * Translations can be filed in the /languages/ directory.
+   * If you're building a theme based on amoredio, use a find and replace
+   * to change 'amoredio' to the name of your theme in all the template files
+   */
+  load_theme_textdomain( 'amoredio', get_template_directory() . '/languages' );
 
-	// Add default posts and comments RSS feed links to head.
-	add_theme_support( 'automatic-feed-links' );
+  // Add default posts and comments RSS feed links to head.
+  add_theme_support( 'automatic-feed-links' );
 
-	/*
-	 * Let WordPress manage the document title.
-	 * By adding theme support, we declare that this theme does not use a
-	 * hard-coded <title> tag in the document head, and expect WordPress to
-	 * provide it for us.
-	 */
-	add_theme_support( 'title-tag' );
+  /*
+   * Let WordPress manage the document title.
+   * By adding theme support, we declare that this theme does not use a
+   * hard-coded <title> tag in the document head, and expect WordPress to
+   * provide it for us.
+   */
+  add_theme_support( 'title-tag' );
 
-	/*
-	 * Enable support for Post Thumbnails on posts and pages.
-	 *
-	 * @link http://codex.wordpress.org/Function_Reference/add_theme_support#Post_Thumbnails
-	 */
-	//add_theme_support( 'post-thumbnails' );
+  /*
+   * Enable support for Post Thumbnails on posts and pages.
+   *
+   * @link http://codex.wordpress.org/Function_Reference/add_theme_support#Post_Thumbnails
+   */
+  //add_theme_support( 'post-thumbnails' );
 
-	// This theme uses wp_nav_menu() in one location.
-	register_nav_menus( array(
-		'primary' => esc_html__( 'Primary Menu', 'amoredio' ),
+  // This theme uses wp_nav_menu() in one location.
+  register_nav_menus( array(
+    'primary' => esc_html__( 'Primary Menu', 'amoredio' ),
     'secondary' => esc_html__('Secondary Menu', 'amoredio'),
-	) );
+  ) );
 
-	/*
-	 * Switch default core markup for search form, comment form, and comments
-	 * to output valid HTML5.
-	 */
-	add_theme_support( 'html5', array(
-		'search-form', 'comment-form', 'comment-list', 'gallery', 'caption',
-	) );
+  /*
+   * Switch default core markup for search form, comment form, and comments
+   * to output valid HTML5.
+   */
+  add_theme_support( 'html5', array(
+    'search-form', 'comment-form', 'comment-list', 'gallery', 'caption',
+  ) );
 
-	/*
-	 * Enable support for Post Formats.
-	 * See http://codex.wordpress.org/Post_Formats
-	 */
-	add_theme_support( 'post-formats', array(
-		'aside', 'image', 'video', 'quote', 'link',
-	) );
+  /*
+   * Enable support for Post Formats.
+   * See http://codex.wordpress.org/Post_Formats
+   */
+  add_theme_support( 'post-formats', array(
+    'aside', 'image', 'video', 'quote', 'link',
+  ) );
 
-	// Set up the WordPress core custom background feature.
-	add_theme_support( 'custom-background', apply_filters( 'amoredio_custom_background_args', array(
-		'default-color' => 'ffffff',
-		'default-image' => '',
-	) ) );
+  // Set up the WordPress core custom background feature.
+  add_theme_support( 'custom-background', apply_filters( 'amoredio_custom_background_args', array(
+    'default-color' => 'ffffff',
+    'default-image' => '',
+  ) ) );
 }
 endif; // amoredio_setup
 add_action( 'after_setup_theme', 'amoredio_setup' );
@@ -146,15 +147,23 @@ add_action( 'after_setup_theme', 'amoredio_setup' );
  * @link http://codex.wordpress.org/Function_Reference/register_sidebar
  */
 function amoredio_widgets_init() {
-	register_sidebar( array(
-		'name'          => esc_html__( 'Sidebar', 'amoredio' ),
-		'id'            => 'sidebar-1',
-		'description'   => '',
-		'before_widget' => '<aside id="%1$s" class="widget %2$s">',
-		'after_widget'  => '</aside>',
-		'before_title'  => '<h1 class="widget-title">',
-		'after_title'   => '</h1>',
-	) );
+  register_sidebar( array(
+    'name'          => esc_html__( 'Sidebar', 'amoredio' ),
+    'id'            => 'sidebar-1',
+    'description'   => '',
+    'before_widget' => '<aside id="%1$s" class="widget %2$s">',
+    'after_widget'  => '</aside>',
+    'before_title'  => '<h1 class="widget-title">',
+    'after_title'   => '</h1>',
+  ) );
+  register_sidebar(array(
+    'name'=> esc_html__( 'SidebarBlog', 'amoredio' ),
+    'id' => 'sidebar-2',
+    'before_widget' => '<aside id="%1$s" class="widget %2$s">',
+    'after_widget' => '</aside>',
+    'before_title' => '<h1 class="widget-title">',
+    'after_title' => '</h1>',
+  ));
 }
 add_action( 'widgets_init', 'amoredio_widgets_init' );
 
@@ -162,26 +171,26 @@ add_action( 'widgets_init', 'amoredio_widgets_init' );
  * Enqueue scripts and styles.
  */
 function amoredio_scripts() {
-	//wp_enqueue_style( 'amoredio-style', get_stylesheet_uri() );
-	wp_enqueue_style( 'amoredio-style-global', get_template_directory_uri() . '/css/global.css' );
+  //wp_enqueue_style( 'amoredio-style', get_stylesheet_uri() );
+  wp_enqueue_style( 'amoredio-style-global', get_template_directory_uri() . '/css/global.css' );
   
   wp_enqueue_style( 'amoredio-style-frontpage', get_template_directory_uri() . '/css/front-page.css' );
 
-	wp_enqueue_style( 'amoredio-style-transposer', get_template_directory_uri() . '/css/jquery.transposer.css' );
+  wp_enqueue_style( 'amoredio-style-transposer', get_template_directory_uri() . '/css/jquery.transposer.css' );
 
-	wp_enqueue_script( 'amoredio-navigation', get_template_directory_uri() . '/js/navigation.js', array(), '20120206', true );
+  wp_enqueue_script( 'amoredio-navigation', get_template_directory_uri() . '/js/navigation.js', array(), '20120206', true );
 
-	wp_enqueue_script( 'amoredio-skip-link-focus-fix', get_template_directory_uri() . '/js/skip-link-focus-fix.js', array(), '20130115', true );
+  wp_enqueue_script( 'amoredio-skip-link-focus-fix', get_template_directory_uri() . '/js/skip-link-focus-fix.js', array(), '20130115', true );
 
-	wp_enqueue_script( 'amoredio-bootstrap', get_template_directory_uri() . '/js/lib.js');
+  wp_enqueue_script( 'amoredio-bootstrap', get_template_directory_uri() . '/js/lib.js');
 
-	wp_enqueue_script( 'amoredio-app', get_template_directory_uri() . '/js/app.js');
+  wp_enqueue_script( 'amoredio-app', get_template_directory_uri() . '/js/app.js');
 
 
 
-	if ( is_singular() && comments_open() && get_option( 'thread_comments' ) ) {
-		wp_enqueue_script( 'comment-reply' );
-	}
+  if ( is_singular() && comments_open() && get_option( 'thread_comments' ) ) {
+    wp_enqueue_script( 'comment-reply' );
+  }
 }
 add_action( 'wp_enqueue_scripts', 'amoredio_scripts' );
 

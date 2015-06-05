@@ -1,0 +1,42 @@
+.widget-area{
+  margin-top:20px;
+}
+
+.widget_text, 
+.widget_categories{
+  @extend .well;
+}
+
+.widget-title{
+  @extend .h3;
+  text-align: center;
+}
+
+.widget_categories{
+  li:before{
+    @extend .fa;
+    @extend .fa-fw;
+    content: "\f07b";
+    font-family: "FontAwesome";
+  }
+}
+
+
+.widget{
+  >ul{
+    @extend .list-unstyled;
+  }
+  &.widget_search{
+    span{
+      display:none;
+    }
+    .search-field{
+      @extend .form-control;
+    }
+    .search-submit{
+      @extend .btn;
+      @extend .btn-primary;
+    }
+    margin-bottom:10px;
+  }
+}

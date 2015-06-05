@@ -12,11 +12,14 @@
  */
 
 get_header(); ?>
-
+	<?php include "inc/partial-header-img.php" ?>
 	<div id="primary" class="content-area">
 		<main id="main" class="site-main container" role="main">
 		<div class="row">
 			<div class="col-sm-8">
+				<?php if ( function_exists('yoast_breadcrumb') ) {
+				  yoast_breadcrumb('<p id="breadcrumbs">','</p>');
+				} ?>
 				<?php if ( have_posts() ) : ?>
 
 					<?php /* Start the Loop */ ?>
@@ -42,7 +45,7 @@ get_header(); ?>
 			</div>
 			<!-- /.col-sm-8 -->
 			<div class="col-sm-4">
-				<?php get_sidebar(); ?>
+				<?php get_sidebar('blog'); ?>
 			</div>
 			<!-- /.col-sm-4 -->
 		</div>

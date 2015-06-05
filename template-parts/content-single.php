@@ -6,11 +6,15 @@
 
 <article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
 	<header class="entry-header">
-		<?php the_title( '<h2 class="entry-title">', '</h2>' ); ?>
+		<?php if ( function_exists('yoast_breadcrumb') ) {
+		  yoast_breadcrumb('<p id="breadcrumbs">','</p>');
+		} ?>
+		<?php the_title( '<h3 class="entry-title">', '</h3>' ); ?>
 
 		<div class="entry-meta">
 			<?php amoredio_posted_on(); ?>
 		</div><!-- .entry-meta -->
+		<hr class="dotted">
 	</header><!-- .entry-header -->
 
 	<div class="entry-content">

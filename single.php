@@ -6,7 +6,14 @@
  */
 
 get_header(); ?>
-
+  <?php
+    $test = new WP_Query(array('pagename'=> 'Blogs'));
+    while($test->have_posts()){
+      $test->the_post();
+      $the_image_url = get_field('image');
+    }
+    include "inc/partial-header-img.php"; 
+  ?>
   <div id="primary" class="content-area">
     <main id="main" class="site-main container" role="main">
     <div class="row">

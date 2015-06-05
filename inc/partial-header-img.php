@@ -1,4 +1,5 @@
 <?php
+  $the_image_url= get_template_directory_uri() . "/assets/img/bokeh.jpg";
   if( get_field('image')){
     $the_image_url = get_field('image');
   }

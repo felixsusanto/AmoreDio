@@ -10,10 +10,7 @@
 @import "wp-pagenavi"; 
 @import "carousel-override";
 @import "gallery";
-
-.widget_text{
-  @extend .well;
-}
+@import "widgets";
 
 hr {
     display: block;
@@ -44,42 +41,16 @@ nav.navbar{
   }
 }
 
-.widget-area{
-  margin-top:20px;
-}
-
 #breadcrumbs{
   @extend .well;
   @extend .well-sm;
+  margin-top: 20px;
   padding-left:20px;
   padding-right:20px;
 }
 
-.widget-title{
-  @extend .h3;
-  text-align: center;
-}
-
 time.updated:before{
   content: " | "; 
-}
-
-.widget{
-  >ul{
-    @extend .list-unstyled;
-  }
-  &.widget_search{
-    span{
-      display:none;
-    }
-    .search-field{
-      @extend .form-control;
-    }
-    .search-submit{
-      @extend .btn;
-      @extend .btn-primary;
-    }
-  }
 }
 
 .site-footer{
