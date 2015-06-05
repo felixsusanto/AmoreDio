@@ -21,12 +21,17 @@ get_header(); ?>
             <!-- added auto load certain tabs based on the anchor url -->
             <script>
               var contact_y = 300;
-              var url = document.location.toString();
-              if (url.match('#')) {
-                  $(window).scroll(contact_y); // go up to show Contact nicely
-                  document.body.scrollTop=contact_y;
-                  $('.nav-tabs a[href=#'+url.split('#')[1]+']').tab('show') ;
-              }
+              $(function() {
+                var url = document.location.toString();
+                if (url.match('#')) {
+                    $('.nav-tabs a[href=#'+url.split('#')[1]+']').tab('show') ;
+                    
+                    // go up to show Contact nicely
+                    setTimeout(function(){
+                      $(window).scrollTop(contact_y);
+                    }, 10);
+                }
+              });
 
               // Change hash for page-reload
               $('.nav-tabs a').on('shown.bs.tab', function (e) {
