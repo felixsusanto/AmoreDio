@@ -7,12 +7,13 @@
 <article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
 	<div class="well">
 		<header class="entry-header">
-			<?php the_title( sprintf( '<h3 class="entry-title"><a href="%s" rel="bookmark">', esc_url( get_permalink() ) ), '</a></h3>' ); ?>
+			<?php the_title( sprintf( '<h1 class="h3 entry-title"><a href="%s" rel="bookmark">', esc_url( get_permalink() ) ), '</a></h1>' ); ?>
 		
 			<?php if ( 'post' == get_post_type() ) : ?>
 			<div class="entry-meta">
 				<?php amoredio_posted_on(); ?>
 			</div><!-- .entry-meta -->
+			<hr>
 			<?php endif; ?>
 		</header><!-- .entry-header -->
 		

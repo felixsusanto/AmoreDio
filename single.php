@@ -35,7 +35,7 @@ get_header(); ?>
       </div>
       <!-- /.col-sm-8 -->
       <div class="col-sm-4">
-        <?php get_sidebar(); ?>
+        <?php get_sidebar('blog'); ?>
       </div>
       <!-- /.col-sm-4 -->
     </div>

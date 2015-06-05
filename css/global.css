@@ -7970,7 +7970,8 @@ a.list-group-item-danger.active, a.list-group-item-danger.active:hover, a.list-g
 
 /* line 7, ../bower_components/bootstrap-sass/assets/stylesheets/bootstrap/_wells.scss */
 .well, .comment-list > li, .widget_text,
-.widget_categories, #breadcrumbs, .site-footer {
+.widget_categories,
+.widget_recent_comments, #breadcrumbs, .site-footer {
   min-height: 20px;
   padding: 19px;
   margin-bottom: 20px;
@@ -7982,7 +7983,8 @@ a.list-group-item-danger.active, a.list-group-item-danger.active:hover, a.list-g
 }
 /* line 15, ../bower_components/bootstrap-sass/assets/stylesheets/bootstrap/_wells.scss */
 .well blockquote, .comment-list > li blockquote, .widget_text blockquote,
-.widget_categories blockquote, #breadcrumbs blockquote, .site-footer blockquote {
+.widget_categories blockquote,
+.widget_recent_comments blockquote, #breadcrumbs blockquote, .site-footer blockquote {
   border-color: #ddd;
   border-color: rgba(0, 0, 0, 0.15);
 }
@@ -12218,12 +12220,18 @@ blockquote.center .quote:after {
 
 /* line 138, ../scss/_custom-other.scss */
 .well h1, .comment-list > li h1, .widget_text h1,
-.widget_categories h1, #breadcrumbs h1, .site-footer h1, .well h2, .comment-list > li h2, .widget_text h2,
-.widget_categories h2, #breadcrumbs h2, .site-footer h2, .well h3, .comment-list > li h3, .widget_text h3,
-.widget_categories h3, #breadcrumbs h3, .site-footer h3, .well h4, .comment-list > li h4, .widget_text h4,
-.widget_categories h4, #breadcrumbs h4, .site-footer h4, .well h5, .comment-list > li h5, .widget_text h5,
-.widget_categories h5, #breadcrumbs h5, .site-footer h5, .well h6, .comment-list > li h6, .widget_text h6,
-.widget_categories h6, #breadcrumbs h6, .site-footer h6 {
+.widget_categories h1,
+.widget_recent_comments h1, #breadcrumbs h1, .site-footer h1, .well h2, .comment-list > li h2, .widget_text h2,
+.widget_categories h2,
+.widget_recent_comments h2, #breadcrumbs h2, .site-footer h2, .well h3, .comment-list > li h3, .widget_text h3,
+.widget_categories h3,
+.widget_recent_comments h3, #breadcrumbs h3, .site-footer h3, .well h4, .comment-list > li h4, .widget_text h4,
+.widget_categories h4,
+.widget_recent_comments h4, #breadcrumbs h4, .site-footer h4, .well h5, .comment-list > li h5, .widget_text h5,
+.widget_categories h5,
+.widget_recent_comments h5, #breadcrumbs h5, .site-footer h5, .well h6, .comment-list > li h6, .widget_text h6,
+.widget_categories h6,
+.widget_recent_comments h6, #breadcrumbs h6, .site-footer h6 {
   margin-top: 0;
 }
 
@@ -12580,22 +12588,22 @@ http://wordpress.org/extend/plugins/wp-pagenavi/
   margin-top: 20px;
 }
 
-/* line 10, ../scss/_widgets.scss */
+/* line 11, ../scss/_widgets.scss */
 .widget-title {
   text-align: center;
 }
 
-/* line 16, ../scss/_widgets.scss */
+/* line 17, ../scss/_widgets.scss */
 .widget_categories li:before {
   content: "\f07b";
   font-family: "FontAwesome";
 }
 
-/* line 29, ../scss/_widgets.scss */
+/* line 30, ../scss/_widgets.scss */
 .widget.widget_search {
   margin-bottom: 10px;
 }
-/* line 30, ../scss/_widgets.scss */
+/* line 31, ../scss/_widgets.scss */
 .widget.widget_search span {
   display: none;
 }

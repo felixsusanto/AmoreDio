@@ -3,7 +3,8 @@
 }
 
 .widget_text, 
-.widget_categories{
+.widget_categories,
+.widget_recent_comments{
   @extend .well;
 }
 

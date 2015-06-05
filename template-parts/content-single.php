@@ -9,7 +9,7 @@
 		<?php if ( function_exists('yoast_breadcrumb') ) {
 		  yoast_breadcrumb('<p id="breadcrumbs">','</p>');
 		} ?>
-		<?php the_title( '<h3 class="entry-title">', '</h3>' ); ?>
+		<?php the_title( '<h1 class="h3 entry-title">', '</h1>' ); ?>
 
 		<div class="entry-meta">
 			<?php amoredio_posted_on(); ?>

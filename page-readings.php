@@ -24,8 +24,8 @@ get_header(); ?>
           $paged = (get_query_var('paged')) ? get_query_var('paged') : 1;
           // The Query
           $the_query = new WP_Query( array('post_type'=>'cg-reading',
-                                           'posts_per_page'=> paged,
-                                           '6'=> $paged
+                                           'posts_per_page'=> 6,
+                                           'paged'=> $paged
                                           ) );
 
           // The Loop
