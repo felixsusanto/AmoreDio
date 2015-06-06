@@ -4,6 +4,14 @@
  */
 ?>
 
+<style>
+  .error-only {
+    display: none;
+  }
+  .has-error .error-only {
+    display: block;
+  }
+</style>
 
 <article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
   <header class="entry-header">
@@ -19,14 +27,18 @@
 
     ?>
 
-    <form class="form-inline" onsubmit="facil_display_check(); return false;">
+    <form class="form-inline facil-box" onsubmit="facil_display_check(); return false;">
       <b class="text-green">Facilitator? <?=$expiry?></b>
-      <div class="form-group">
+      <div class="form-group facil-password has-feedback">
         <label class="sr-only" for="password">Password</label>
-        <input type="text" class="form-control" id="password" placeholder="Enter password">
+        <input type="text" class="form-control has-error" id="password" placeholder="Enter password">
+        <span class="error-only glyphicon glyphicon-remove form-control-feedback" aria-hidden="true"></span>
+        <span id="inputError2Status" class="sr-only">(error)</span>
       </div>
       <button class="btn btn-primary">Submit</button>
     </form>
+    <div class="facil"> Jawaban untuk fasil akan ditampilkan</div>
+
     <hr class="dotted">
     <?php the_title( '<h2 class="entry-title">', '</h2>' ); ?>
 
@@ -49,12 +61,15 @@
         }
 
         // check password
-        if ($('#password').val() == pwd) {
+        if ($('#password').val().toLowerCase() == pwd.toLowerCase()) {
           display_facil = true;
+        } else if($('#password').val()) {
+          $('.facil-password').addClass('has-error');
         }
 
         if (display_facil) {
-          $('.facil').show();
+          $('.facil').show('slow');
+          $('.facil-box').hide('slow');
         } else {
           $('.facil').hide();
         }
