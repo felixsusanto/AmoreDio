@@ -1,3 +1,7 @@
+Edit on git wiki instead :)
+https://github.com/felixsusanto/AmoreDio/wiki
+
+
 AmoreDio Theme
 ===
 
