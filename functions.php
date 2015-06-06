@@ -186,25 +186,36 @@ add_action( 'widgets_init', 'amoredio_widgets_init' );
  * Enqueue scripts and styles.
  */
 function amoredio_scripts() {
-  //wp_enqueue_style( 'amoredio-style', get_stylesheet_uri() );
-  //wp_enqueue_style('site_responsive', get_template_directory_uri() . '/assets/css/website-responsive.css', false, filemtime(get_stylesheet_directory() . '/assets/css/website-responsive.css'));
+  //Register JS
+  wp_register_script('amoredio-js-vendor', get_template_directory_uri() . '/js/lib.js', false, filemtime( get_stylesheet_directory().'/js/lib.js' ), true);
+  wp_register_script('amoredio-js-songbook', get_template_directory_uri() . '/js/songbook.js', false, filemtime( get_stylesheet_directory().'/js/songbook.js' ), true);
+  wp_register_script('amoredio-js-frontpage', get_template_directory_uri() . '/js/frontpage.js', false, filemtime( get_stylesheet_directory().'/js/frontpage.js' ), true);
+  wp_register_script('amoredio-js-pagecontact', get_template_directory_uri() . '/js/page-contact.js', false, filemtime( get_stylesheet_directory().'/js/page-contact.js' ), true);
 
-  wp_enqueue_style( 'amoredio-style-global', get_template_directory_uri() . '/css/global.css', false, filemtime(get_stylesheet_directory() . '/css/global.css'));
+  //Global CSS Style and JS to be added
+  wp_enqueue_style('amoredio-style-global', get_template_directory_uri() . '/css/global.css', false, filemtime(get_stylesheet_directory() . '/css/global.css'));
+  wp_enqueue_script('amoredio-js-vendor');
+
+  //Conditional CSS to be added on certain page or custom post type
+  //on Front Page
+  if(is_front_page()){
+    wp_enqueue_style('amoredio-style-frontpage', get_template_directory_uri() . '/css/front-page.css', false, filemtime(get_stylesheet_directory() . '/css/front-page.css'));
+    wp_enqueue_script('amoredio-js-frontpage');
+  } 
+  //on single songbook
+  elseif('songbook' == get_post_type()){
+    wp_enqueue_style('amoredio-style-transposer', get_template_directory_uri() . '/css/jquery.transposer.css', false, filemtime(get_stylesheet_directory() . '/css/jquery.transposer.css'));
+    wp_enqueue_script('amoredio-js-songbook');
+  }
+  //on page contact
+  elseif(is_page( 18 )){
+    wp_enqueue_script('amoredio-js-pagecontact');
+  }
+
+  //Consider to remove this 2 lines if it's not used - legacy from underscores_me theme
+  //wp_enqueue_script( 'amoredio-navigation', get_template_directory_uri() . '/js/navigation.js', array(), '20120206', true );
+  //wp_enqueue_script( 'amoredio-skip-link-focus-fix', get_template_directory_uri() . '/js/skip-link-focus-fix.js', array(), '20130115', true );
   
-  wp_enqueue_style( 'amoredio-style-frontpage', get_template_directory_uri() . '/css/front-page.css' );
-
-  wp_enqueue_style( 'amoredio-style-transposer', get_template_directory_uri() . '/css/jquery.transposer.css' );
-
-  wp_enqueue_script( 'amoredio-navigation', get_template_directory_uri() . '/js/navigation.js', array(), '20120206', true );
-
-  wp_enqueue_script( 'amoredio-skip-link-focus-fix', get_template_directory_uri() . '/js/skip-link-focus-fix.js', array(), '20130115', true );
-
-  wp_enqueue_script( 'amoredio-bootstrap', get_template_directory_uri() . '/js/lib.js');
-
-  wp_enqueue_script( 'amoredio-app', get_template_directory_uri() . '/js/app.js');
-
-
-
   if ( is_singular() && comments_open() && get_option( 'thread_comments' ) ) {
     wp_enqueue_script( 'comment-reply' );
   }

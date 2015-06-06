@@ -19,7 +19,7 @@ get_header(); ?>
             <?php get_template_part( 'template-parts/content', 'page' ); ?>
 
             <!-- added auto load certain tabs based on the anchor url -->
-            <script>
+            <!--script>
               var contact_y = 300;
               $(function() {
                 var url = document.location.toString();
@@ -43,7 +43,7 @@ get_header(); ?>
                     window.location.hash = '#myhash';
                   }
               })
-            </script>
+            </script-->
 
           <?php endwhile; // end of the loop. ?>
         </div>
