@@ -46,7 +46,7 @@
       <?php amoredio_posted_on(); ?>
     </div><!-- .entry-meta -->
 
-    <script>
+    <!--script>
       var expiry_time = <?=$expiry_time?>;
       var current_time = <?=$current_time?>;
       // please wait until your Facil and cell group share / discuss this topic :)
@@ -79,7 +79,7 @@
         facil_display_check();
       });
 
-    </script>
+    </script-->
 
 
   </header><!-- .entry-header -->

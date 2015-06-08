@@ -191,6 +191,7 @@ function amoredio_scripts() {
   wp_register_script('amoredio-js-songbook', get_template_directory_uri() . '/js/songbook.js', false, filemtime( get_stylesheet_directory().'/js/songbook.js' ), true);
   wp_register_script('amoredio-js-frontpage', get_template_directory_uri() . '/js/frontpage.js', false, filemtime( get_stylesheet_directory().'/js/frontpage.js' ), true);
   wp_register_script('amoredio-js-pagecontact', get_template_directory_uri() . '/js/page-contact.js', false, filemtime( get_stylesheet_directory().'/js/page-contact.js' ), true);
+  wp_register_script('amoredio-js-single-cg-reading', get_template_directory_uri() . '/js/single-cg-reading.js', false, filemtime( get_stylesheet_directory().'/js/single-cg-reading.js' ), true);
 
   //Global CSS Style and JS to be added
   wp_enqueue_style('amoredio-style-global', get_template_directory_uri() . '/css/global.css', false, filemtime(get_stylesheet_directory() . '/css/global.css'));
@@ -210,6 +211,9 @@ function amoredio_scripts() {
   //on page contact
   elseif(is_page( 18 )){
     wp_enqueue_script('amoredio-js-pagecontact');
+  }
+  elseif('cg-reading' == get_post_type()){
+    wp_enqueue_script('amoredio-js-single-cg-reading');
   }
 
   //Consider to remove this 2 lines if it's not used - legacy from underscores_me theme
