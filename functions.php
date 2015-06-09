@@ -213,6 +213,7 @@ function amoredio_scripts() {
     wp_enqueue_script('amoredio-js-pagecontact');
   }
   elseif('cg-reading' == get_post_type()){
+    wp_enqueue_style('amoredio-style-cg-reading', get_template_directory_uri() . '/css/single-cg-reading.css', false, filemtime(get_stylesheet_directory() . '/css/single-cg-reading.css'));
     wp_enqueue_script('amoredio-js-single-cg-reading');
   }
 

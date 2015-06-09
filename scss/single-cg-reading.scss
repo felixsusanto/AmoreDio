@@ -1,0 +1,41 @@
+@import "custom-variables";
+
+.error-only {
+  display: none;
+}
+.has-error .error-only {
+  display: block;
+}
+.has-feedback label.sr-only ~ .form-control-feedback{
+  top:10px;
+}
+
+.wrapper-revealer{
+  //Revealing on and off
+    //initial setting when it's pass protected
+  .alert, .facil{
+    display:none;
+  }
+    //after pass success
+  &.revealed{
+    .alert, .facil{
+      display:block;
+    }
+    .facil-box, hr.dotted{
+      display:none;
+    }
+  }
+  
+  //Font size tweaking
+  .entry-title{
+    font-size: $font-size-h2;
+  }
+  h1{ font-size: $font-size-h2; }
+  h2{ font-size: $font-size-h3; }
+  h3{ font-size: $font-size-h4; }
+  h4{ font-size: $font-size-h5; }
+  h5{ font-size: $font-size-h6; }
+
+  //Breathing space on bottom
+  margin-bottom:60px;
+}

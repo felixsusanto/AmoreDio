@@ -1,0 +1,59 @@
+/*CUSTOM*/
+@import url(http://fonts.googleapis.com/css?family=Raleway:400,200,700);
+@import url(http://fonts.googleapis.com/css?family=Roboto+Slab:400,300,100);
+/*CUSTOM COLOR*/
+/* line 3, ../scss/single-cg-reading.scss */
+.error-only {
+  display: none;
+}
+
+/* line 6, ../scss/single-cg-reading.scss */
+.has-error .error-only {
+  display: block;
+}
+
+/* line 9, ../scss/single-cg-reading.scss */
+.has-feedback label.sr-only ~ .form-control-feedback {
+  top: 10px;
+}
+
+/* line 13, ../scss/single-cg-reading.scss */
+.wrapper-revealer {
+  margin-bottom: 60px;
+}
+/* line 16, ../scss/single-cg-reading.scss */
+.wrapper-revealer .alert, .wrapper-revealer .facil {
+  display: none;
+}
+/* line 21, ../scss/single-cg-reading.scss */
+.wrapper-revealer.revealed .alert, .wrapper-revealer.revealed .facil {
+  display: block;
+}
+/* line 24, ../scss/single-cg-reading.scss */
+.wrapper-revealer.revealed .facil-box, .wrapper-revealer.revealed hr.dotted {
+  display: none;
+}
+/* line 30, ../scss/single-cg-reading.scss */
+.wrapper-revealer .entry-title {
+  font-size: 45px;
+}
+/* line 33, ../scss/single-cg-reading.scss */
+.wrapper-revealer h1 {
+  font-size: 45px;
+}
+/* line 34, ../scss/single-cg-reading.scss */
+.wrapper-revealer h2 {
+  font-size: 23px;
+}
+/* line 35, ../scss/single-cg-reading.scss */
+.wrapper-revealer h3 {
+  font-size: 18px;
+}
+/* line 36, ../scss/single-cg-reading.scss */
+.wrapper-revealer h4 {
+  font-size: 14px;
+}
+/* line 37, ../scss/single-cg-reading.scss */
+.wrapper-revealer h5 {
+  font-size: 12px;
+}
