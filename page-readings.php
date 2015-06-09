@@ -19,12 +19,12 @@ get_header(); ?>
             <?php get_template_part( 'template-parts/content', 'page' ); ?>
 
           <?php endwhile; // end of the loop. ?>
-          <!-- table of content to the songbook list -->
+          
           <?php
           $paged = (get_query_var('paged')) ? get_query_var('paged') : 1;
           // The Query
           $the_query = new WP_Query( array('post_type'=>'cg-reading',
-                                           'posts_per_page'=> 6,
+                                           'posts_per_page'=> 10,
                                            'paged'=> $paged
                                           ) );
 
