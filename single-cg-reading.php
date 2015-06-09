@@ -22,7 +22,7 @@ get_header(); ?>
 
           <?php get_template_part( 'template-parts/content', 'single-reading' ); ?>
 
-          <?php the_post_navigation( array('screen_reader_text' => __( 'Navigate Songbook' ))); ?>
+          <?php the_post_navigation( array('screen_reader_text' => __( 'Navigate CG Readings' ))); ?>
 
           <?php
             // If comments are open or we have at least one comment, load up the comment template
