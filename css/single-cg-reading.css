@@ -2,58 +2,119 @@
 @import url(http://fonts.googleapis.com/css?family=Raleway:400,200,700);
 @import url(http://fonts.googleapis.com/css?family=Roboto+Slab:400,300,100);
 /*CUSTOM COLOR*/
-/* line 3, ../scss/single-cg-reading.scss */
+/* line 4, ../scss/single-cg-reading.scss */
 .error-only {
   display: none;
 }
 
-/* line 6, ../scss/single-cg-reading.scss */
+/* line 7, ../scss/single-cg-reading.scss */
 .has-error .error-only {
   display: block;
 }
 
-/* line 9, ../scss/single-cg-reading.scss */
+/* line 10, ../scss/single-cg-reading.scss */
 .has-feedback label.sr-only ~ .form-control-feedback {
   top: 10px;
 }
 
-/* line 13, ../scss/single-cg-reading.scss */
+/* line 14, ../scss/single-cg-reading.scss */
 .wrapper-revealer {
   margin-bottom: 60px;
 }
-/* line 16, ../scss/single-cg-reading.scss */
+/* line 17, ../scss/single-cg-reading.scss */
 .wrapper-revealer .alert, .wrapper-revealer .facil {
   display: none;
 }
-/* line 21, ../scss/single-cg-reading.scss */
+/* line 22, ../scss/single-cg-reading.scss */
 .wrapper-revealer.revealed .alert, .wrapper-revealer.revealed .facil {
   display: block;
 }
-/* line 24, ../scss/single-cg-reading.scss */
+/* line 25, ../scss/single-cg-reading.scss */
 .wrapper-revealer.revealed .facil-box, .wrapper-revealer.revealed hr.dotted {
   display: none;
 }
-/* line 30, ../scss/single-cg-reading.scss */
+/* line 31, ../scss/single-cg-reading.scss */
 .wrapper-revealer .entry-title {
   font-size: 45px;
-}
-/* line 33, ../scss/single-cg-reading.scss */
-.wrapper-revealer h1 {
-  font-size: 45px;
+  font-weight: 200;
 }
 /* line 34, ../scss/single-cg-reading.scss */
-.wrapper-revealer h2 {
-  font-size: 23px;
+.wrapper-revealer h1 {
+  font-size: 45px;
+  color: #428bca;
 }
 /* line 35, ../scss/single-cg-reading.scss */
-.wrapper-revealer h3 {
-  font-size: 18px;
+.wrapper-revealer h2 {
+  font-size: 23px;
+  font-weight: normal;
 }
 /* line 36, ../scss/single-cg-reading.scss */
+.wrapper-revealer h3 {
+  font-size: 18px;
+  color: #428bca;
+}
+/* line 37, ../scss/single-cg-reading.scss */
 .wrapper-revealer h4 {
   font-size: 14px;
 }
-/* line 37, ../scss/single-cg-reading.scss */
+/* line 38, ../scss/single-cg-reading.scss */
 .wrapper-revealer h5 {
   font-size: 12px;
+  color: #428bca;
+}
+
+/* line 45, ../scss/single-cg-reading.scss */
+article .aligncenter {
+  margin: 10px auto;
+}
+/* line 48, ../scss/single-cg-reading.scss */
+article .alignleft {
+  float: left;
+  margin: 10px;
+  margin-left: 0;
+}
+/* line 53, ../scss/single-cg-reading.scss */
+article .alignright {
+  float: right;
+  margin: 10px;
+  margin-right: 0;
+}
+/* line 58, ../scss/single-cg-reading.scss */
+article img {
+  max-width: 100%;
+  height: auto;
+}
+/* line 62, ../scss/single-cg-reading.scss */
+article .wp-caption {
+  background: #fff;
+  padding: 5px;
+  border: 1px solid #ddd;
+  -moz-border-radius: 3px;
+  -webkit-border-radius: 3px;
+  border-radius: 3px;
+}
+/* line 68, ../scss/single-cg-reading.scss */
+article .wp-caption-text {
+  padding: 5px 0;
+  text-align: center;
+}
+@media (max-width: 767px) {
+  /* line 73, ../scss/single-cg-reading.scss */
+  article .alignleft,
+  article .alignright {
+    float: none;
+    margin: 0;
+  }
+}
+/* line 80, ../scss/single-cg-reading.scss */
+article ol {
+  list-style: decimal;
+}
+/* line 82, ../scss/single-cg-reading.scss */
+article ol ol {
+  list-style: upper-alpha;
+}
+/* line 84, ../scss/single-cg-reading.scss */
+article ol ol ol {
+  list-style: lower-alpha;
 }

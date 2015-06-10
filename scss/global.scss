@@ -67,24 +67,25 @@ time.updated:before{
     @extend .h3;
   }
   .nav-links{
-    @extend .clearfix;
+    @extend .row;
+    margin-bottom:40px;
     .nav-previous, .nav-next{
-      display:inline-block;
-      @extend .btn;
-      @extend .btn-link;
+      @extend .col-sm-6;
     }
-    .nav-previous{
-      >a:before{
-        content: '\f060 \0020';
-        font-family: 'FontAwesome';
-      }
+    .nav-previous:before,
+    .nav-next:before{
+      display:block;
+      border-bottom:1px solid #ddd;
+      padding-bottom:10px;
+      margin-bottom:5px;
     }
-    .nav-next{
-      float:right;
-      >a:after{
-        content:'\0020 \f061';
-        font-family: 'FontAwesome';
-      }
+    .nav-previous:before{
+      content: "Previous";
+      @extend .h4;
+    }
+    .nav-next:before{
+      content:"Next";
+      @extend .h4;
     }
   }
 }

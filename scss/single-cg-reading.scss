@@ -1,3 +1,4 @@
+@import "compass";
 @import "custom-variables";
 
 .error-only {
@@ -28,14 +29,61 @@
   
   //Font size tweaking
   .entry-title{
-    font-size: $font-size-h2;
+    font-size: $font-size-h2; font-weight:200;
   }
-  h1{ font-size: $font-size-h2; }
-  h2{ font-size: $font-size-h3; }
-  h3{ font-size: $font-size-h4; }
+  h1{ font-size: $font-size-h2; color:$brand-primary;}
+  h2{ font-size: $font-size-h3; font-weight: normal;}
+  h3{ font-size: $font-size-h4; color:$brand-primary;}
   h4{ font-size: $font-size-h5; }
-  h5{ font-size: $font-size-h6; }
+  h5{ font-size: $font-size-h6; color:$brand-primary;}
 
   //Breathing space on bottom
   margin-bottom:60px;
+}
+
+article{
+  .aligncenter{
+    margin: 10px auto;
+  }
+  .alignleft{
+    float:left;
+    margin:10px;
+    margin-left:0;
+  }
+  .alignright{
+    float:right;
+    margin:10px;
+    margin-right:0;
+  }
+  img{
+    max-width:100%;
+    height:auto;
+  }
+  .wp-caption{
+    background:#fff;
+    padding:5px;
+    border:1px solid #ddd;
+    @include border-radius(3px);
+  }
+  .wp-caption-text{
+    padding:5px 0;
+    text-align: center;
+  }
+  @media(max-width:$screen-xs-max){
+    .alignleft,
+    .alignright{
+      float:none;
+      margin:0;
+    }
+  }
+
+  ol {
+    list-style:decimal;
+    ol{
+      list-style:upper-alpha;
+      ol{
+        list-style:lower-alpha;
+      }
+    }
+  }
 }
