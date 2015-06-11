@@ -33,18 +33,8 @@ function permalink_thingy($atts) {
 }
 add_shortcode('permalink', 'permalink_thingy');
 
-function fasil_content($atts, $content) {
-  extract(shortcode_atts(array(
-    'class'=>"facil",
-    'text' => $content  // default value if none supplied
-    ), $atts));
-
-    if ($text) {
-        $url = get_permalink($id);
-        return "<div class='$class' href='$url'>$text</a>";
-    } else {
-     return get_permalink($id);
-  }
+function fasil_content( $atts, $content = null ) {
+   return '<div class="facil">'.do_shortcode($content).'</div>';
 }
 add_shortcode('fasil', 'fasil_content');
 

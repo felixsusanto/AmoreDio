@@ -1,6 +1,13 @@
 @import "compass";
 @import "custom-variables";
 
+//meta
+.serial_info{
+  margin-bottom: -20px;
+  color:$brand-primary;
+}
+
+//password validation
 .error-only {
   display: none;
 }
@@ -31,29 +38,49 @@
   .entry-title{
     font-size: $font-size-h2; font-weight:200;
   }
-  h1{ font-size: $font-size-h2; color:$brand-primary;}
-  h2{ font-size: $font-size-h3; font-weight: normal;}
-  h3{ font-size: $font-size-h4; color:$brand-primary;}
-  h4{ font-size: $font-size-h5; }
-  h5{ font-size: $font-size-h6; color:$brand-primary;}
+  h1,h2,h3,h4,h5{
+    line-height:1.4;
+  }
+  h1{ 
+    font-size: $font-size-h2; 
+    color:$brand-primary;
+  }
+  h2{ 
+    font-size: $font-size-h3; 
+    font-weight: normal;
+  }
+  h3{ 
+    font-size: $font-size-h4; 
+    color:$brand-primary;
+  }
+  h4{ 
+    font-size: $font-size-h5; 
+  }
+  h5{ 
+    font-size: $font-size-h6; 
+    color:$brand-primary;
+  }
+
 
   //Breathing space on bottom
-  margin-bottom:60px;
+  margin-bottom:30px;
 }
 
 article{
-  .aligncenter{
-    margin: 10px auto;
-  }
-  .alignleft{
-    float:left;
-    margin:10px;
-    margin-left:0;
-  }
+  .alignleft,
   .alignright{
-    float:right;
-    margin:10px;
-    margin-right:0;
+    float:none;
+    margin:10px auto;
+    margin-top: 0;
+    width:auto;
+    display:block;
+  }
+  figure{
+    text-align: center;
+    &.alignleft,
+    &.alignright{
+      width:auto;
+    }
   }
   img{
     max-width:100%;
@@ -69,11 +96,30 @@ article{
     padding:5px 0;
     text-align: center;
   }
-  @media(max-width:$screen-xs-max){
-    .alignleft,
+  @media(min-width:$screen-sm){
+    .aligncenter{
+      margin: 10px auto;
+      margin-top: 0;
+    }
+    .alignleft{
+      float:left;
+      margin:10px;
+      margin-top: 0;
+      margin-left:0;
+      width: 50%;
+    }
     .alignright{
-      float:none;
-      margin:0;
+      float:right;
+      margin:10px;
+      margin-top: 0;
+      margin-right:0;
+      width: 50%;
+    }
+    figure{
+      &.alignleft,
+      &.alignright{
+        width:50%!important;
+      }
     }
   }
 
@@ -86,4 +132,9 @@ article{
       }
     }
   }
+}
+
+//Utility class
+.clear{
+  clear:both;
 }

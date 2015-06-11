@@ -58,6 +58,7 @@ time.updated:before{
 }
 
 .site-footer{
+  margin-top:30px;
   @extend .well;
   margin-bottom:0;
 }
@@ -68,7 +69,6 @@ time.updated:before{
   }
   .nav-links{
     @extend .row;
-    margin-bottom:40px;
     .nav-previous, .nav-next{
       @extend .col-sm-6;
     }

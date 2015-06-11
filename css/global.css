@@ -9495,13 +9495,10 @@ time.updated:before {
 
 /* line 60, ../scss/global.scss */
 .site-footer {
+  margin-top: 30px;
   margin-bottom: 0;
 }
 
-/* line 69, ../scss/global.scss */
-.post-navigation .nav-links {
-  margin-bottom: 40px;
-}
 /* line 75, ../scss/global.scss */
 .post-navigation .nav-links .nav-previous:before,
 .post-navigation .nav-links .nav-next:before {

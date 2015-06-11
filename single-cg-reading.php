@@ -21,8 +21,10 @@ get_header(); ?>
         <?php while ( have_posts() ) : the_post(); ?>
 
           <?php get_template_part( 'template-parts/content', 'single-reading' ); ?>
-
-          <?php the_post_navigation( array('screen_reader_text' => __( 'Navigate CG Readings' ))); ?>
+          
+          <div class="well">
+            <?php the_post_navigation( array('screen_reader_text' => __( 'Navigate CG Readings' ))); ?>
+          </div>
 
           <?php
             // If comments are open or we have at least one comment, load up the comment template
