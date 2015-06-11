@@ -32,14 +32,14 @@ if($expired){$revealed = "revealed";}
 ?>
 
 <article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
-  <div class="wrapper-revealer <?php echo $revealed ?>" data-password="<?php the_field('password'); ?>">
+  <div class="wrapper-revealer clearfix <?php echo $revealed ?>" data-password="<?php the_field('password'); ?>">
     <header class="entry-header">
       <?php
         if ( function_exists('yoast_breadcrumb') ) {
           yoast_breadcrumb('<p id="breadcrumbs">','</p>');
         }
       ?>
-
+      <?php if(get_field("facilitator_function")): ?>
       <form class="form-inline facil-box" onsubmit="facil_display_check(); return false;">
         <b class="text-green">Facilitator?</b>
         <div class="form-group facil-password has-feedback">
@@ -55,6 +55,10 @@ if($expired){$revealed = "revealed";}
         <i class="fa fa-bullhorn"></i> Jawaban untuk fasil akan ditampilkan
       </div>
       <hr class="dotted">
+      <?php endif; ?>
+      <?php if(get_field("serial_info")):?>
+        <h2 class="h3 serial_info"><?php the_field("serial_info")?></h2>
+      <?php endif;?>
       <?php the_title( '<h2 class="entry-title">', '</h2>' ); ?>
     
       <div class="entry-meta">
