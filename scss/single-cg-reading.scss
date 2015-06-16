@@ -60,8 +60,6 @@
     font-size: $font-size-h6; 
     color:$brand-primary;
   }
-
-
   //Breathing space on bottom
   margin-bottom:30px;
 }
@@ -75,11 +73,15 @@ article{
     width:auto;
     display:block;
   }
+  blockquote{
+    margin-left:20px;
+    background:#fff; 
+  }
   figure{
     text-align: center;
     &.alignleft,
     &.alignright{
-      width:auto;
+      width:auto!important;
     }
   }
   img{

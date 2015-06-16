@@ -73,7 +73,7 @@
   color: #428bca;
 }
 
-/* line 70, ../scss/single-cg-reading.scss */
+/* line 68, ../scss/single-cg-reading.scss */
 article .alignleft,
 article .alignright {
   float: none;
@@ -82,20 +82,25 @@ article .alignright {
   width: auto;
   display: block;
 }
-/* line 78, ../scss/single-cg-reading.scss */
+/* line 76, ../scss/single-cg-reading.scss */
+article blockquote {
+  margin-left: 20px;
+  background: #fff;
+}
+/* line 80, ../scss/single-cg-reading.scss */
 article figure {
   text-align: center;
 }
-/* line 80, ../scss/single-cg-reading.scss */
+/* line 82, ../scss/single-cg-reading.scss */
 article figure.alignleft, article figure.alignright {
-  width: auto;
+  width: auto !important;
 }
-/* line 85, ../scss/single-cg-reading.scss */
+/* line 87, ../scss/single-cg-reading.scss */
 article img {
   max-width: 100%;
   height: auto;
 }
-/* line 89, ../scss/single-cg-reading.scss */
+/* line 91, ../scss/single-cg-reading.scss */
 article .wp-caption {
   background: #fff;
   padding: 5px;
@@ -104,18 +109,18 @@ article .wp-caption {
   -webkit-border-radius: 3px;
   border-radius: 3px;
 }
-/* line 95, ../scss/single-cg-reading.scss */
+/* line 97, ../scss/single-cg-reading.scss */
 article .wp-caption-text {
   padding: 5px 0;
   text-align: center;
 }
 @media (min-width: 768px) {
-  /* line 100, ../scss/single-cg-reading.scss */
+  /* line 102, ../scss/single-cg-reading.scss */
   article .aligncenter {
     margin: 10px auto;
     margin-top: 0;
   }
-  /* line 104, ../scss/single-cg-reading.scss */
+  /* line 106, ../scss/single-cg-reading.scss */
   article .alignleft {
     float: left;
     margin: 10px;
@@ -123,7 +128,7 @@ article .wp-caption-text {
     margin-left: 0;
     width: 50%;
   }
-  /* line 111, ../scss/single-cg-reading.scss */
+  /* line 113, ../scss/single-cg-reading.scss */
   article .alignright {
     float: right;
     margin: 10px;
@@ -131,25 +136,25 @@ article .wp-caption-text {
     margin-right: 0;
     width: 50%;
   }
-  /* line 119, ../scss/single-cg-reading.scss */
+  /* line 121, ../scss/single-cg-reading.scss */
   article figure.alignleft, article figure.alignright {
     width: 50% !important;
   }
 }
-/* line 126, ../scss/single-cg-reading.scss */
+/* line 128, ../scss/single-cg-reading.scss */
 article ol {
   list-style: decimal;
 }
-/* line 128, ../scss/single-cg-reading.scss */
+/* line 130, ../scss/single-cg-reading.scss */
 article ol ol {
   list-style: upper-alpha;
 }
-/* line 130, ../scss/single-cg-reading.scss */
+/* line 132, ../scss/single-cg-reading.scss */
 article ol ol ol {
   list-style: lower-alpha;
 }
 
-/* line 138, ../scss/single-cg-reading.scss */
+/* line 140, ../scss/single-cg-reading.scss */
 .clear {
   clear: both;
 }
