@@ -86,21 +86,32 @@ article .alignright {
 article blockquote {
   margin-left: 20px;
   background: #fff;
+  padding-top: 30px;
+  padding-bottom: 30px;
+  border-left-color: #428bca;
 }
-/* line 80, ../scss/single-cg-reading.scss */
+/* line 82, ../scss/single-cg-reading.scss */
+article blockquote > p {
+  font-style: italic;
+}
+/* line 85, ../scss/single-cg-reading.scss */
+article blockquote > small {
+  color: #428bca;
+}
+/* line 89, ../scss/single-cg-reading.scss */
 article figure {
   text-align: center;
 }
-/* line 82, ../scss/single-cg-reading.scss */
+/* line 91, ../scss/single-cg-reading.scss */
 article figure.alignleft, article figure.alignright {
   width: auto !important;
 }
-/* line 87, ../scss/single-cg-reading.scss */
+/* line 96, ../scss/single-cg-reading.scss */
 article img {
   max-width: 100%;
   height: auto;
 }
-/* line 91, ../scss/single-cg-reading.scss */
+/* line 100, ../scss/single-cg-reading.scss */
 article .wp-caption {
   background: #fff;
   padding: 5px;
@@ -109,18 +120,18 @@ article .wp-caption {
   -webkit-border-radius: 3px;
   border-radius: 3px;
 }
-/* line 97, ../scss/single-cg-reading.scss */
+/* line 106, ../scss/single-cg-reading.scss */
 article .wp-caption-text {
   padding: 5px 0;
   text-align: center;
 }
 @media (min-width: 768px) {
-  /* line 102, ../scss/single-cg-reading.scss */
+  /* line 111, ../scss/single-cg-reading.scss */
   article .aligncenter {
     margin: 10px auto;
     margin-top: 0;
   }
-  /* line 106, ../scss/single-cg-reading.scss */
+  /* line 115, ../scss/single-cg-reading.scss */
   article .alignleft {
     float: left;
     margin: 10px;
@@ -128,7 +139,7 @@ article .wp-caption-text {
     margin-left: 0;
     width: 50%;
   }
-  /* line 113, ../scss/single-cg-reading.scss */
+  /* line 122, ../scss/single-cg-reading.scss */
   article .alignright {
     float: right;
     margin: 10px;
@@ -136,25 +147,44 @@ article .wp-caption-text {
     margin-right: 0;
     width: 50%;
   }
-  /* line 121, ../scss/single-cg-reading.scss */
+  /* line 130, ../scss/single-cg-reading.scss */
   article figure.alignleft, article figure.alignright {
     width: 50% !important;
   }
 }
-/* line 128, ../scss/single-cg-reading.scss */
+/* line 137, ../scss/single-cg-reading.scss */
 article ol {
   list-style: decimal;
 }
-/* line 130, ../scss/single-cg-reading.scss */
+/* line 139, ../scss/single-cg-reading.scss */
 article ol ol {
   list-style: upper-alpha;
 }
-/* line 132, ../scss/single-cg-reading.scss */
+/* line 141, ../scss/single-cg-reading.scss */
 article ol ol ol {
   list-style: lower-alpha;
 }
 
-/* line 140, ../scss/single-cg-reading.scss */
+/* line 149, ../scss/single-cg-reading.scss */
+.table-responsive {
+  overflow-x: auto !important;
+}
+/* line 151, ../scss/single-cg-reading.scss */
+.table-responsive table {
+  margin: 0;
+}
+
+/* line 155, ../scss/single-cg-reading.scss */
+.table-responsive > .table > thead > tr > th,
+.table-responsive > .table > tbody > tr > th,
+.table-responsive > .table > tfoot > tr > th,
+.table-responsive > .table > thead > tr > td,
+.table-responsive > .table > tbody > tr > td,
+.table-responsive > .table > tfoot > tr > td {
+  white-space: normal;
+}
+
+/* line 166, ../scss/single-cg-reading.scss */
 .clear {
   clear: both;
 }

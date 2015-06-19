@@ -75,7 +75,16 @@ article{
   }
   blockquote{
     margin-left:20px;
-    background:#fff; 
+    background:#fff;
+    padding-top:30px;
+    padding-bottom:30px;
+    border-left-color:$brand-primary;
+    >p{
+      font-style:italic;
+    }
+    >small{
+      color:$brand-primary;
+    }
   }
   figure{
     text-align: center;
@@ -135,6 +144,23 @@ article{
     }
   }
 }
+
+//Table no-wrapping overrides
+.table-responsive{
+  overflow-x:auto!important;
+  table{
+    margin:0;
+  }
+}
+.table-responsive > .table > thead > tr > th,
+.table-responsive > .table > tbody > tr > th,
+.table-responsive > .table > tfoot > tr > th,
+.table-responsive > .table > thead > tr > td,
+.table-responsive > .table > tbody > tr > td,
+.table-responsive > .table > tfoot > tr > td{
+  white-space:normal;
+}
+
 
 //Utility class
 .clear{
