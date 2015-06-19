@@ -8,8 +8,8 @@ http://wordpress.org/extend/plugins/wp-pagenavi/
   clear: both;
   margin:15px 0;
   a, span {
-    @extend .btn;
-    @extend .btn-default;
+    border:none;
+    padding:10px 5px;
   }
   span.current {
     @extend .active;
@@ -19,11 +19,31 @@ http://wordpress.org/extend/plugins/wp-pagenavi/
   }
   span.pages{
     //style here
-    background:#fff;
-    &:hover, &:focus, &:active{
-      background:#fff;
-      @include box-shadow(none);
-      cursor:auto;
-    }
+    display:block;
+    padding:0;
+    padding-bottom:4px;
+    margin-bottom: 8px;
+    background:transparent;
+    margin-bottom:5px;
+    font-weight: bold;
+    color:$brand-primary;
+    border-bottom:1px solid #d5d5d5;
+  }
+  .current{
+    @extend .active;
+  }
+  .current,
+  .larger, .smaller,
+  .nextpostslink,.previouspostslink,
+  .last,.first{
+    @extend .btn;
+    @extend .btn-sm;
+  }
+  .current,.larger,.smaller{
+    @extend .btn-default;
+  }
+  .nextpostslink,.previouspostslink,
+  .last,.first{
+    @extend .btn-primary;
   }
 }
