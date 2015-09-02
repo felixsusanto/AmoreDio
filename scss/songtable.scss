@@ -1,0 +1,15 @@
+#songtable{
+  .header:before{ 
+    content:"\f0dc \0020";
+    font-family: 'FontAwesome';
+  }
+  .header.headerSortUp:before{
+    content:"\f0de \0020";
+  }
+  .header.headerSortDown:before{
+    content:"\f0dd \0020";
+  }
+  th:hover{
+    cursor:pointer;
+  }
+}

@@ -25,6 +25,7 @@
   "devDependencies": {
     "fontawesome": "~4.3.0",
     "jQuery-Chord-Transposer": "jessegavin/jQuery-Chord-Transposer",
-    "owl.carousel": "smashingboxes/OwlCarousel2"
+    "owl.carousel": "smashingboxes/OwlCarousel2",
+    "tablesorter": "christianbach/tablesorter"
   }
 }

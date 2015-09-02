@@ -12,6 +12,13 @@ module.exports = function(grunt) {
           livereload: 35729
         }
       },
+      js:{
+        files: ['js/**/*.js'],
+        tasks: ['concat'],
+        options: {
+          livereload: 35729
+        }
+      },
       php: {
         files: ['**/*.php'],
         options: {
@@ -44,7 +51,8 @@ module.exports = function(grunt) {
         src: ['js/lib/jquery.min.js',
               'js/lib/bootstrap.min.js',
               'js/lib/jquery.transposer.js',
-              'js/lib/owl.carousel.min.js'],
+              'js/lib/owl.carousel.min.js',
+              'js/lib/jquery.tablesorter.min.js'],
         dest: 'js/lib.js',
       },
     },

@@ -1,0 +1,17 @@
+/* line 2, ../scss/songtable.scss */
+#songtable .header:before {
+  content: "\f0dc \0020";
+  font-family: 'FontAwesome';
+}
+/* line 6, ../scss/songtable.scss */
+#songtable .header.headerSortUp:before {
+  content: "\f0de \0020";
+}
+/* line 9, ../scss/songtable.scss */
+#songtable .header.headerSortDown:before {
+  content: "\f0dd \0020";
+}
+/* line 12, ../scss/songtable.scss */
+#songtable th:hover {
+  cursor: pointer;
+}

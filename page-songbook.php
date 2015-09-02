@@ -34,7 +34,7 @@ get_header(); ?>
           if ( $the_query->have_posts() ) {
             //echo '<ul>';
             ?>
-              <table class="table table-striped">
+              <table id="songtable" class="table table-striped">
                 <thead>
                   <tr>
                     <th>Title</th>

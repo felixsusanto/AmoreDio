@@ -204,6 +204,7 @@ add_action( 'widgets_init', 'amoredio_widgets_init' );
 function amoredio_scripts() {
   //Register JS
   wp_register_script('amoredio-js-vendor', get_template_directory_uri() . '/js/lib.js', false, filemtime( get_stylesheet_directory().'/js/lib.js' ), true);
+  wp_register_script('amoredio-js-songtable', get_template_directory_uri() . '/js/songtable.js', false, filemtime( get_stylesheet_directory().'/js/songtable.js' ), true);
   wp_register_script('amoredio-js-songbook', get_template_directory_uri() . '/js/songbook.js', false, filemtime( get_stylesheet_directory().'/js/songbook.js' ), true);
   wp_register_script('amoredio-js-frontpage', get_template_directory_uri() . '/js/frontpage.js', false, filemtime( get_stylesheet_directory().'/js/frontpage.js' ), true);
   wp_register_script('amoredio-js-pagecontact', get_template_directory_uri() . '/js/page-contact.js', false, filemtime( get_stylesheet_directory().'/js/page-contact.js' ), true);
@@ -218,6 +219,11 @@ function amoredio_scripts() {
   if(is_front_page()){
     wp_enqueue_style('amoredio-style-frontpage', get_template_directory_uri() . '/css/front-page.css', false, filemtime(get_stylesheet_directory() . '/css/front-page.css'));
     wp_enqueue_script('amoredio-js-frontpage');
+  }
+  //on Songbook Page
+  elseif(is_page( 4 )){
+    wp_enqueue_style('amoredio-style-songtable', get_template_directory_uri() . '/css/songtable.css', false, filemtime(get_stylesheet_directory() . '/css/songtable.css'));
+    wp_enqueue_script('amoredio-js-songtable');
   } 
   //on single songbook
   elseif('songbook' == get_post_type()){
