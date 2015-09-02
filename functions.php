@@ -40,7 +40,7 @@ add_shortcode('fasil', 'fasil_content');
 
 function video_embed( $atts) {
   extract(shortcode_atts(array('url' => ""), $atts));
-  preg_match('/(?P<url>(?<=youtu\.be\/)[^\?&\/]*)/', $url, $vidcode);
+  preg_match('/(?P<url>((?<=youtu\.be\/)|(?<=\?v=))[^\?&\/\s]*)/', $url, $vidcode);
   return '<div class="embed-responsive embed-responsive-16by9"> <iframe class="embed-responsive-item" width="560" height="315" src="https://www.youtube.com/embed/'.$vidcode[url].'" frameborder="0" allowfullscreen></iframe> </div>';
 }
 add_shortcode('vid', 'video_embed');

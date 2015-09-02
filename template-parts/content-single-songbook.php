@@ -54,9 +54,9 @@
 
   <div class="entry-content">
 
-    <pre data-key="<?php the_field('basic_chord'); ?>">
-      <?php the_field('chords'); ?>
-    </pre>
+<pre data-key="<?php the_field('basic_chord'); ?>">
+<?php the_field('chords'); ?>
+</pre>
     <?php
       wp_link_pages( array(
         'before' => '<div class="page-links">' . esc_html__( 'Pages:', 'amoredio' ),
