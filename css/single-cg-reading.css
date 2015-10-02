@@ -188,3 +188,8 @@ article ol ol ol {
 .clear {
   clear: both;
 }
+
+/* line 169, ../scss/single-cg-reading.scss */
+.forceImg {
+  width: 100% !important;
+}
