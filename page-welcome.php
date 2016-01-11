@@ -67,7 +67,20 @@ get_header(); ?>
           <hr class="dotted">
 
           <div class="upcoming-event">
-            <h2 class="text-center text-red"><i class="fa fa-bullhorn"></i> Upcoming Event</h2>
+            <h2 class="text-center text-red"><i class="fa fa-bullhorn"></i> 
+              <?php
+                $last_event_id = wp_get_recent_posts(array('post_type'=>'event', 'showposts'=> 1))[0]['ID'];
+                $event_date = DateTime::createFromFormat('Ymd', get_field('date', $last_event_id));
+                $event_dateformat = $event_date->format('d-m-Y');
+                $event_date_timestamp = strtotime($event_dateformat);
+
+                if(time() > $event_date_timestamp){
+                  echo "Latest Event";
+                } else {
+                  echo "Upcoming Event";
+                }
+              ?>
+            </h2>
             <?php
               $args_event = array('post_type'=>'event', 'showposts'=> 1);
               $event = new WP_Query($args_event);
