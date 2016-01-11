@@ -57,6 +57,13 @@ get_header(); ?>
                         $date = DateTime::createFromFormat('Ymd', get_field('date'));
                         echo $date->format('l, d F Y');
                         ?>
+                        <?php if( get_field('to_date') ): ?>
+                          <br>to<br>
+                          <?php
+                            $toDate = DateTime::createFromFormat('Ymd', get_field('to_date'));
+                            echo $toDate->format('l, d F Y');
+                          ?>
+                        <?php endif; ?>
                       </dd>
                       <dt>Time</dt>
                       <dd><?php the_field('time'); ?></dd>
