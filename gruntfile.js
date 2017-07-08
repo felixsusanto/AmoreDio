@@ -52,6 +52,7 @@ module.exports = function(grunt) {
               'js/lib/bootstrap.min.js',
               'js/lib/jquery.transposer.js',
               'js/lib/owl.carousel.min.js',
+              'js/lib/validator.min.js',
               'js/lib/jquery.tablesorter.min.js'],
         dest: 'js/lib.js',
       },

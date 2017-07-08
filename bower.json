@@ -26,6 +26,7 @@
     "fontawesome": "~4.3.0",
     "jQuery-Chord-Transposer": "jessegavin/jQuery-Chord-Transposer",
     "owl.carousel": "smashingboxes/OwlCarousel2",
-    "tablesorter": "christianbach/tablesorter"
+    "tablesorter": "christianbach/tablesorter",
+    "bootstrap-validator": "^0.11.9"
   }
 }
