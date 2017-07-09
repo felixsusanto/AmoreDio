@@ -69,15 +69,6 @@ $(document).ready(function(){
     }
   });
 
-  $formPrayerRequest.on('submit', function (e) {
-    event.preventDefault(); 
-
-    notifyHandler();
-    var prayer = $("#prayer").val();
-    alert('Prayer Request: \n' + prayer);
-
-    $(this).unbind('submit').submit();
-    
-  })
+  $formPrayerRequest.on('wpcf7submit', notifyHandler});
 
 });
