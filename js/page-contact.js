@@ -69,6 +69,6 @@ $(document).ready(function(){
     }
   });
 
-  $formPrayerRequest.on('wpcf7submit', notifyHandler});
+  $formPrayerRequest.on('wpcf7submit', notifyHandler);
 
 });
