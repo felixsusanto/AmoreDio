@@ -15,7 +15,7 @@
       <div class="row">
         <div class="col-md-3">
           <p>2014 &copy; copyrights AmoreDio</p>
-          <p>Follow us on: <a href="#"><i class="fa fa-facebook-square fa-lg"></i> Facebook</a></p>
+          <p>Follow us on: <a href="https://www.facebook.com/cellgroup.amoredio/" target="_blank"><i class="fa fa-facebook-square fa-lg"></i> Facebook</a></p>
         </div><!-- /.span -->
         <div class="col-md-9">
           <h3>Site Map</h3>
