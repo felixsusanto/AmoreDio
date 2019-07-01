@@ -51,6 +51,8 @@ get_header(); ?>
             </div>
           <?php endif; wp_reset_query(); ?>
 
+          <hr class="dotted">
+
           <div class="upcoming-event">
             <h2 class="text-center text-red"><i class="fa fa-bullhorn"></i> 
               <?php
@@ -167,20 +169,19 @@ get_header(); ?>
               <?php endwhile; endif; wp_reset_query();?>
           </div><!-- /.latest-updates -->
 
+          <?php 
+            $query = array( 'id' => '1', 'use_datatables' => false, 'print_name' => false );
+            if((bool)tablepress_get_table($query)) {
+          ?>
+            <hr class="dotted">
+            <div class="contact-us">
+              <h2 class="text-center text-red">Contact Us</h2>
+              <?php tablepress_print_table($query) ?>
+            </div><!-- contact us -->
+          <?php
+            }
+          ?>
         </div> <!-- /.span -->
-        
-        <?php 
-          $query = array( 'id' => '1', 'use_datatables' => false, 'print_name' => false );
-          if(tablepress_print_table($query)) {
-        ?>
-          <div class="contact-us">
-            <h2 class="text-center text-red">Contact Us</h2>
-            <?php tablepress_print_table($query) ?>
-          </div><!-- contact us -->
-        <?php
-          }
-        ?>
-        <hr class="dotted">
 
         <div class="col-sm-4">
           <?php get_sidebar(); ?>
