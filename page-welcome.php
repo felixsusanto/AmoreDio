@@ -51,21 +51,6 @@ get_header(); ?>
             </div>
           <?php endif; wp_reset_query(); ?>
 
-          <div class="prayer-intention">
-            <h2 class="text-center text-red">Prayer Intention of&nbsp;the&nbsp;Month</h2>
-            <?php
-              $args_pray = array('post_type'=>'prayer', 'showposts'=> 1);
-              $prayer = new WP_Query($args_pray);
-              if ($prayer->have_posts()): while($prayer->have_posts()): $prayer->the_post();
-            ?>
-              <h4 class="text-center"><?php the_title();?></h4>
-              <div class="content"><?php the_content(); ?></div>
-            <?php endwhile;?>
-            <?php endif; wp_reset_query(); ?>
-          </div><!-- /.prayer-intention -->
-
-          <hr class="dotted">
-
           <div class="upcoming-event">
             <h2 class="text-center text-red"><i class="fa fa-bullhorn"></i> 
               <?php
@@ -127,7 +112,22 @@ get_header(); ?>
               </div><!-- /.row -->
             <?php endwhile; endif; wp_reset_query(); ?>  
           </div><!-- /.upcoming-event -->
-          
+
+          <hr class="dotted">
+
+          <div class="prayer-intention">
+            <h2 class="text-center text-red">Prayer Intention of&nbsp;the&nbsp;Month</h2>
+            <?php
+              $args_pray = array('post_type'=>'prayer', 'showposts'=> 1);
+              $prayer = new WP_Query($args_pray);
+              if ($prayer->have_posts()): while($prayer->have_posts()): $prayer->the_post();
+            ?>
+              <h4 class="text-center"><?php the_title();?></h4>
+              <div class="content"><?php the_content(); ?></div>
+            <?php endwhile;?>
+            <?php endif; wp_reset_query(); ?>
+          </div><!-- /.prayer-intention -->
+
           <hr class="dotted">
 
           <div class="latest-updates">
@@ -165,11 +165,22 @@ get_header(); ?>
                   </div><!-- /.recent-article -->
                 </div> 
               <?php endwhile; endif; wp_reset_query();?>
-                           
-            
-          </div>
+          </div><!-- /.latest-updates -->
 
         </div> <!-- /.span -->
+        
+        <?php 
+          $query = array( 'id' => '1', 'use_datatables' => false, 'print_name' => false );
+          if(tablepress_print_table($query)) {
+        ?>
+          <div class="contact-us">
+            <h2 class="text-center text-red">Contact Us</h2>
+            <?php tablepress_print_table($query) ?>
+          </div><!-- contact us -->
+        <?php
+          }
+        ?>
+        <hr class="dotted">
 
         <div class="col-sm-4">
           <?php get_sidebar(); ?>
